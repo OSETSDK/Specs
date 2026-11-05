@@ -1,0 +1,1310 @@
+{
+  "schema_version": 1,
+  "selection": "Latest officially published version of each included Pod at migration time; older versions are not imported.",
+  "pods": [
+    {
+      "name": "OSETCoreSDK-BF",
+      "order": 1,
+      "modified_at": "2026-11-04T10:14:41.303734+08:00",
+      "selected_version": "7.0.3.3",
+      "versions": [
+        {
+          "version": "7.0.3.3",
+          "path": "OSETCoreSDK-BF/7.0.3.3/OSETCoreSDK-BF.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/a/a/a/OSETCoreSDK-BF/7.0.3.3/OSETCoreSDK-BF.podspec.json",
+          "sha1": "a4a9360924ccfe450d515c86b699c722d1ecb211",
+          "sha256": "7d9b7d2445f7b7f3b8bad95d28e4ff1ca95f30b2bfd9e090832acc3890a9135e",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETCoreSDK-BF.git",
+            "tag": "7.0.3.3"
+          },
+          "dependencies": {
+            "OSETCoreAd": [],
+            "Ads-CN/BUAdSDK": [],
+            "Ads-CN/CSJMediation": [],
+            "AdSetQDBAdapter": [],
+            "AdSetQDFAdapter": []
+          },
+          "delivery_tag_sha": "ed6138552aa869c5dab452962265810a97510da1",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETCoreToCSJAdapter",
+      "order": 2,
+      "modified_at": "2026-10-30T15:56:33.057980+08:00",
+      "selected_version": "7.0.3.0",
+      "versions": [
+        {
+          "version": "7.0.3.0",
+          "path": "OSETCoreToCSJAdapter/7.0.3.0/OSETCoreToCSJAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/6/b/0/OSETCoreToCSJAdapter/7.0.3.0/OSETCoreToCSJAdapter.podspec.json",
+          "sha1": "88589dbc8a549e8c713359f2f32aadebf25d0acb",
+          "sha256": "0cd686154763b195aecc4a84b0e7133b8b4e0f48eb03880560fe2e1ac7b638d7",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETCoreToCSJAdapter.git",
+            "tag": "7.0.3.0"
+          },
+          "dependencies": {
+            "OSETCoreAd": [
+              ">=7.0.0.0"
+            ],
+            "Ads-CN/BUAdSDK": [],
+            "Ads-CN/CSJMediation": []
+          },
+          "delivery_tag_sha": "53ca376727f2db09195c51440d307339c6773432",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETCoreToGMAdapter",
+      "order": 3,
+      "modified_at": "2026-10-30T15:56:33.014992+08:00",
+      "selected_version": "7.0.3.0",
+      "versions": [
+        {
+          "version": "7.0.3.0",
+          "path": "OSETCoreToGMAdapter/7.0.3.0/OSETCoreToGMAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/8/d/f/OSETCoreToGMAdapter/7.0.3.0/OSETCoreToGMAdapter.podspec.json",
+          "sha1": "95fa0674dea524c06c26671247a083f00b5767db",
+          "sha256": "7d800828e03edf46b68add02cbc90c9f1833fb3c10cd89fce9b72d9407a430f2",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETCoreToGMAdapter.git",
+            "tag": "7.0.3.0"
+          },
+          "dependencies": {
+            "OSETCoreAd": [
+              ">=7.0.0.0"
+            ],
+            "Ads-CN-Beta/BUAdSDK": [],
+            "Ads-CN-Beta/CSJMediation": []
+          },
+          "delivery_tag_sha": "813db38d5488d3ca42c1d2845ffa7873abf1f8a9",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETCoreAd",
+      "order": 4,
+      "modified_at": "2026-10-27T13:24:30.288315+08:00",
+      "selected_version": "7.0.3.5",
+      "versions": [
+        {
+          "version": "7.0.3.5",
+          "path": "OSETCoreAd/7.0.3.5/OSETCoreAd.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/2/5/0/OSETCoreAd/7.0.3.5/OSETCoreAd.podspec.json",
+          "sha1": "913be90e79a0f5c6061eab38be089abd5658c672",
+          "sha256": "668d41df0325d6b17652226f977fab8b498db4bb0251d31314514d88d69d4109",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETCoreAd.git",
+            "tag": "7.0.3.5"
+          },
+          "dependencies": {
+            "AliyunLogProducer": []
+          },
+          "delivery_tag_sha": "1f113db8c08d75f449f143aa708d5dccdb135d4e",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "AdSetQDEAdapter",
+      "order": 5,
+      "modified_at": "2026-10-22T17:19:51.318104+08:00",
+      "selected_version": "2.0.2.1",
+      "versions": [
+        {
+          "version": "2.0.2.1",
+          "path": "AdSetQDEAdapter/2.0.2.1/AdSetQDEAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/e/8/d/AdSetQDEAdapter/2.0.2.1/AdSetQDEAdapter.podspec.json",
+          "sha1": "d1c0f0eb64c89b06f86869f0fa3fd9fa118231ec",
+          "sha256": "24cbea26a9a7b3ff8d6cbfa5f53f29f13432c80c610bd151ae338d3933fb7898",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDEAdapter.git",
+            "tag": "2.0.2.1"
+          },
+          "dependencies": {
+            "OSETCoreAd": [
+              ">= 7.0.3.2"
+            ],
+            "AdSetQDEAdSDK": []
+          },
+          "delivery_tag_sha": "58367b938d26a9be6f022b8a6eddb9a5c54b9026",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETQMAdapter",
+      "order": 6,
+      "modified_at": "2026-10-22T17:06:27.099133+08:00",
+      "selected_version": "2.0.2.1",
+      "versions": [
+        {
+          "version": "2.0.2.1",
+          "path": "OSETQMAdapter/2.0.2.1/OSETQMAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/a/3/a/OSETQMAdapter/2.0.2.1/OSETQMAdapter.podspec.json",
+          "sha1": "c26c1535ce43c82881890eb63142e30cb748fcdd",
+          "sha256": "445fd5e81914301d58720c1acd14b006c5187b3efec8e6c9579fb6f2612d7d37",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETQMAdapter.git",
+            "tag": "2.0.2.1"
+          },
+          "dependencies": {
+            "OSETCoreAd": [
+              ">= 7.0.3.2"
+            ],
+            "QuMengAdSDK": []
+          },
+          "delivery_tag_sha": "b3b7bc0c105686a4fd9fed4dc8f0f28539e07382",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "AdSetQDAAdapter",
+      "order": 7,
+      "modified_at": "2026-10-21T14:03:37.453876+08:00",
+      "selected_version": "2.0.2.0",
+      "versions": [
+        {
+          "version": "2.0.2.0",
+          "path": "AdSetQDAAdapter/2.0.2.0/AdSetQDAAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/c/0/0/AdSetQDAAdapter/2.0.2.0/AdSetQDAAdapter.podspec.json",
+          "sha1": "3724a2f7f19b37036070499374c1089ed72a4fdd",
+          "sha256": "454bffb6b71fdbef614dd4bc961b1e05d83d9803528cc0cd69ce4e7645357579",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDAAdapter.git",
+            "tag": "2.0.2.0"
+          },
+          "dependencies": {
+            "OSETCoreAd": [],
+            "AdSetQDAAdSDK": [
+              "= 3.0.22"
+            ]
+          },
+          "delivery_tag_sha": "fdd7f6a0d850e658e0693b3f02de390478b5783f",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "AdSetQDGAdapter",
+      "order": 8,
+      "modified_at": "2026-10-21T13:44:37.414185+08:00",
+      "selected_version": "2.0.2.3",
+      "versions": [
+        {
+          "version": "2.0.2.3",
+          "path": "AdSetQDGAdapter/2.0.2.3/AdSetQDGAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/c/8/c/AdSetQDGAdapter/2.0.2.3/AdSetQDGAdapter.podspec.json",
+          "sha1": "0f7500b58a602c662fdccda68cf3f85b11808896",
+          "sha256": "1d663c0a3ee6bffbcfa075c2112283c00d5ccdb5f5d13709080ea34f6f3e7b61",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDGAdapter.git",
+            "tag": "2.0.2.3"
+          },
+          "dependencies": {
+            "OSETCoreAd": [
+              ">= 7.0.3.3"
+            ],
+            "AdSetQDGAdCore": [
+              "= 202.4.0.2"
+            ]
+          },
+          "delivery_tag_sha": "5e1d20b11ade1b5daf4e575b2ed63dc03d8b764a",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "AdSetQDAAdSDK",
+      "order": 9,
+      "modified_at": "2026-10-21T11:57:19.914815+08:00",
+      "selected_version": "3.0.22",
+      "versions": [
+        {
+          "version": "3.0.22",
+          "path": "AdSetQDAAdSDK/3.0.22/AdSetQDAAdSDK.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/9/0/6/AdSetQDAAdSDK/3.0.22/AdSetQDAAdSDK.podspec.json",
+          "sha1": "edcc7246394fb5fdb1e5d8065121ff01ae29c241",
+          "sha256": "19071538826a0f426bb0933d5e9f5686371be03248342a4abd54b2cba15fecc6",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDAAdSDK.git",
+            "tag": "3.0.22"
+          },
+          "dependencies": {},
+          "delivery_tag_sha": "cf56275782019ac905c924abed6d1ec7084f234a",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETYDAdapter",
+      "order": 10,
+      "modified_at": "2026-10-20T15:54:03.324830+08:00",
+      "selected_version": "2.0.1.0",
+      "versions": [
+        {
+          "version": "2.0.1.0",
+          "path": "OSETYDAdapter/2.0.1.0/OSETYDAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/8/3/f/OSETYDAdapter/2.0.1.0/OSETYDAdapter.podspec.json",
+          "sha1": "7163ff0466e29ceeae9b642fd6a1db2e22f9403f",
+          "sha256": "e700750ad75e6f4547cad7d3dc2b61caadbabbeb162c5dc038b65c508bdfa251",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETYDAdapter.git",
+            "tag": "2.0.1.0"
+          },
+          "dependencies": {
+            "OSETCoreAd": [
+              ">= 7.0.3.2"
+            ],
+            "YDADSDK": [
+              "= 3.0.1"
+            ]
+          },
+          "delivery_tag_sha": "5199837a5374ad2247ec19975854ea6eb668711d",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETCoreToBidRCAdapter",
+      "order": 11,
+      "modified_at": "2026-10-20T09:22:26.212064+08:00",
+      "selected_version": "7.0.3.2",
+      "versions": [
+        {
+          "version": "7.0.3.2",
+          "path": "OSETCoreToBidRCAdapter/7.0.3.2/OSETCoreToBidRCAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/c/2/0/OSETCoreToBidRCAdapter/7.0.3.2/OSETCoreToBidRCAdapter.podspec.json",
+          "sha1": "4ce5258244b9e76728d7033570b926d21628a793",
+          "sha256": "60ad08045f7492869d4b86bcb71f61b7795e442a3afbaa9c4c8f36b85a2267f8",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETCoreToBidRCAdapter.git",
+            "tag": "7.0.3.2"
+          },
+          "dependencies": {
+            "OSETCoreAd": [],
+            "ToBid-iOS-RC": []
+          },
+          "delivery_tag_sha": "a19fda049f03ebee9eac7d1d7a24e6ca23e57897",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETCoreToBidBetaAdapter",
+      "order": 12,
+      "modified_at": "2026-10-20T09:22:14.417036+08:00",
+      "selected_version": "7.0.3.2",
+      "versions": [
+        {
+          "version": "7.0.3.2",
+          "path": "OSETCoreToBidBetaAdapter/7.0.3.2/OSETCoreToBidBetaAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/2/a/a/OSETCoreToBidBetaAdapter/7.0.3.2/OSETCoreToBidBetaAdapter.podspec.json",
+          "sha1": "164811ce65647aeea568d683924ad405df1e1a1b",
+          "sha256": "866fb36f5cf452206bfc594c1e291fb6493efe7bb6dd1267497d9010091368c0",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETCoreToBidBetaAdapter.git",
+            "tag": "7.0.3.2"
+          },
+          "dependencies": {
+            "OSETCoreAd": [],
+            "ToBid-iOS-Beta": []
+          },
+          "delivery_tag_sha": "1ae91ffd8a635abd53dd043e6bf318ece0e93e45",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETCoreToBidAdapter",
+      "order": 13,
+      "modified_at": "2026-10-20T09:22:04.024355+08:00",
+      "selected_version": "7.0.3.2",
+      "versions": [
+        {
+          "version": "7.0.3.2",
+          "path": "OSETCoreToBidAdapter/7.0.3.2/OSETCoreToBidAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/1/4/b/OSETCoreToBidAdapter/7.0.3.2/OSETCoreToBidAdapter.podspec.json",
+          "sha1": "6d2b945389943369feb2084ee982c2252778cf93",
+          "sha256": "24900b66f168cf996c5c06e7663dc60d7ff8dcd20a68932e77794668d832d2f1",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETCoreToBidAdapter.git",
+            "tag": "7.0.3.2"
+          },
+          "dependencies": {
+            "OSETCoreAd": [],
+            "ToBid-iOS": [
+              ">5.0.0"
+            ]
+          },
+          "delivery_tag_sha": "5261b52acc065a494f3ca4e044df22431e500b29",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETCoreToTopOnAdapter",
+      "order": 14,
+      "modified_at": "2026-10-19T15:05:36.213643+08:00",
+      "selected_version": "7.0.3.3",
+      "versions": [
+        {
+          "version": "7.0.3.3",
+          "path": "OSETCoreToTopOnAdapter/7.0.3.3/OSETCoreToTopOnAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/9/9/d/OSETCoreToTopOnAdapter/7.0.3.3/OSETCoreToTopOnAdapter.podspec.json",
+          "sha1": "73ff27e74f7df137b6e5462dce69b9ff5b9f5a84",
+          "sha256": "53fdadeb9a652126d845e9d4259de937df849563af857e62c9bd8ace04e76aa2",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETCoreToTopOnAdapter.git",
+            "tag": "7.0.3.3"
+          },
+          "dependencies": {
+            "OSETCoreAd": [
+              ">=7.0.3.2"
+            ],
+            "TPNiOS": [
+              ">=6.5.31"
+            ]
+          },
+          "delivery_tag_sha": "394f661ee4f8fca1f2f571f11b357c9d5acef4a6",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETCoreToTakuAdapter",
+      "order": 15,
+      "modified_at": "2026-10-19T14:35:13.304988+08:00",
+      "selected_version": "6.6.1.1",
+      "versions": [
+        {
+          "version": "6.6.1.1",
+          "path": "OSETCoreToTakuAdapter/6.6.1.1/OSETCoreToTakuAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/5/c/e/OSETCoreToTakuAdapter/6.6.1.1/OSETCoreToTakuAdapter.podspec.json",
+          "sha1": "82c36e7f879a3e03026bec150f9f0defc57e3d85",
+          "sha256": "64b2552d5bda583538c04f6c7ba1f9ae36a629e2b69fa54a7e23a75174616134",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETCoreToTakuAdapter.git",
+            "tag": "6.6.1.1"
+          },
+          "dependencies": {
+            "OSETCoreSDK": [
+              ">=6.6.0.7"
+            ],
+            "AnyThinkiOS": [
+              ">=6.5.31"
+            ]
+          },
+          "delivery_tag_sha": "495b9ce0e0ee66309f5f18e3f2698d81bc127240",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETCoreToYQAdapter",
+      "order": 16,
+      "modified_at": "2026-10-16T13:18:18.926876+08:00",
+      "selected_version": "7.0.0.0",
+      "versions": [
+        {
+          "version": "7.0.0.0",
+          "path": "OSETCoreToYQAdapter/7.0.0.0/OSETCoreToYQAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/6/d/0/OSETCoreToYQAdapter/7.0.0.0/OSETCoreToYQAdapter.podspec.json",
+          "sha1": "fa30ea3c34fed0d756d6fa06a5c4f646d8aa93ea",
+          "sha256": "ffad7f276c681fdbf885806df13978e431d3e07e8a4c85eec76f810a4b65f41f",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETCoreToYQAdapter.git",
+            "tag": "7.0.0.0"
+          },
+          "dependencies": {
+            "OSETCoreAd": [
+              ">= 7.0.3.2"
+            ],
+            "MediatomiOS": []
+          },
+          "delivery_tag_sha": "b812481c99dc42a025de73ed8064165e2c439b6c",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "AdSetQDFAdapter",
+      "order": 17,
+      "modified_at": "2026-10-14T18:04:49.258658+08:00",
+      "selected_version": "2.0.1.2",
+      "versions": [
+        {
+          "version": "2.0.1.2",
+          "path": "AdSetQDFAdapter/2.0.1.2/AdSetQDFAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/d/5/1/AdSetQDFAdapter/2.0.1.2/AdSetQDFAdapter.podspec.json",
+          "sha1": "12b4f422128bc1293928d2518fa783c8d8e774d3",
+          "sha256": "15b03813fb2127733192e91a6aacfd5bf06f2c11fc6afd2488689eb4a8c92f07",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDFAdapter.git",
+            "tag": "2.0.1.2"
+          },
+          "dependencies": {
+            "OSETCoreAd": [
+              ">= 7.0.3.2"
+            ],
+            "AdSetQDFAdSDK": [
+              ">= 1.1.32.0"
+            ]
+          },
+          "delivery_tag_sha": "aaaee444b064796c6df5bf9e738bcd00dcad9a44",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETHXAdapter",
+      "order": 18,
+      "modified_at": "2026-10-14T17:19:40.602753+08:00",
+      "selected_version": "2.0.2.2",
+      "versions": [
+        {
+          "version": "2.0.2.2",
+          "path": "OSETHXAdapter/2.0.2.2/OSETHXAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/3/a/8/OSETHXAdapter/2.0.2.2/OSETHXAdapter.podspec.json",
+          "sha1": "2aecdd8413a0a29156b5a114bd6023c582db97d3",
+          "sha256": "77476902b89d1ef7ca7bf14f0657a77f07e35786cea8c813df40e17ee761229a",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETHXAdapter.git",
+            "tag": "2.0.2.2"
+          },
+          "dependencies": {
+            "OSETCoreAd": [
+              ">= 7.0.3.2"
+            ],
+            "HuanxiaoSDK": [
+              "= 1.5.10"
+            ]
+          },
+          "delivery_tag_sha": "23252d2aa1b97ffe96a33cddb927dd1d477ed77f",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "AdSetQDFAdSDK",
+      "order": 19,
+      "modified_at": "2026-10-14T10:13:33.770924+08:00",
+      "selected_version": "1.1.32.0",
+      "versions": [
+        {
+          "version": "1.1.32.0",
+          "path": "AdSetQDFAdSDK/1.1.32.0/AdSetQDFAdSDK.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/7/e/5/AdSetQDFAdSDK/1.1.32.0/AdSetQDFAdSDK.podspec.json",
+          "sha1": "6ae6eba97a045f66a19288cf8b7fe9fbb4b7f610",
+          "sha256": "ced7b53f8931443fc3bd43cddf88e5416e6ed28d3ec0375bcf5c3a17d4a51269",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDFAdSDK.git",
+            "tag": "1.1.32.0"
+          },
+          "dependencies": {},
+          "delivery_tag_sha": "71f679f140b4e193f5f72165b7bb091310d71ad6",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETGDTAdapter",
+      "order": 20,
+      "modified_at": "2026-10-10T09:44:30.162955+08:00",
+      "selected_version": "2.0.2.1",
+      "versions": [
+        {
+          "version": "2.0.2.1",
+          "path": "OSETGDTAdapter/2.0.2.1/OSETGDTAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/0/1/6/OSETGDTAdapter/2.0.2.1/OSETGDTAdapter.podspec.json",
+          "sha1": "7e19eedcfd5a7288faa547a4585e7539fe40e9ba",
+          "sha256": "d267086977533c323a1576d05e1cef79aa8efd1cb63c3f61b8a68f8e4e607bd6",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETGDTAdapter.git",
+            "tag": "2.0.2.1"
+          },
+          "dependencies": {
+            "OSETCoreAd": [
+              ">= 7.0.3.2"
+            ],
+            "GDTMobSDK": []
+          },
+          "delivery_tag_sha": "729c1004866259afca4e6e28f74de12a4a168e4e",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETKSAdapter",
+      "order": 21,
+      "modified_at": "2026-10-10T09:44:15.993961+08:00",
+      "selected_version": "2.0.2.1",
+      "versions": [
+        {
+          "version": "2.0.2.1",
+          "path": "OSETKSAdapter/2.0.2.1/OSETKSAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/9/1/7/OSETKSAdapter/2.0.2.1/OSETKSAdapter.podspec.json",
+          "sha1": "389c7dbadac61131556344fdd1b48d15307af9b9",
+          "sha256": "312600226a938a08e54b6aa3728e0f837080a2b375620a13b6aee682ec94b363",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETKSAdapter.git",
+            "tag": "2.0.2.1"
+          },
+          "dependencies": {
+            "OSETCoreAd": [
+              ">= 7.0.3.2"
+            ],
+            "KSAdSDK": []
+          },
+          "delivery_tag_sha": "50075eee3292fc652a791ec13b414fec5375d7cd",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "AdSetQDDAdapter",
+      "order": 22,
+      "modified_at": "2026-10-09T17:20:50.748935+08:00",
+      "selected_version": "2.0.2.0",
+      "versions": [
+        {
+          "version": "2.0.2.0",
+          "path": "AdSetQDDAdapter/2.0.2.0/AdSetQDDAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/8/b/d/AdSetQDDAdapter/2.0.2.0/AdSetQDDAdapter.podspec.json",
+          "sha1": "bdcd2d4174252d1f1792fcce63f123bcc8efd64d",
+          "sha256": "965a370e5276846b539f53c6ba3381228e83685968e26dd6dfddb186c9e12b54",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDDAdapter.git",
+            "tag": "2.0.2.0"
+          },
+          "dependencies": {
+            "OSETCoreAd": [
+              ">= 7.0.3.2"
+            ],
+            "AdSetQDDAdSDK": []
+          },
+          "delivery_tag_sha": "0613b29a53dfe30d25f81e066263fd997784a8ad",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "AdSetQDCAdapter",
+      "order": 23,
+      "modified_at": "2026-10-09T17:16:06.481554+08:00",
+      "selected_version": "2.0.2.1",
+      "versions": [
+        {
+          "version": "2.0.2.1",
+          "path": "AdSetQDCAdapter/2.0.2.1/AdSetQDCAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/a/2/d/AdSetQDCAdapter/2.0.2.1/AdSetQDCAdapter.podspec.json",
+          "sha1": "c27aa5b1218921708aa655719e0534dc4b6b5241",
+          "sha256": "2138669ea10105155b79be28cb3effb93d0a5af8bcf45011343dce156507640c",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDCAdapter.git",
+            "tag": "2.0.2.1"
+          },
+          "dependencies": {
+            "OSETCoreAd": [
+              ">= 7.0.3.2"
+            ],
+            "AdSetQDCAdSDK": []
+          },
+          "delivery_tag_sha": "e8455825589ed884dbb562f9b2de2a5f04a52129",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETCoreSDK",
+      "order": 24,
+      "modified_at": "2026-10-09T16:14:21.797779+08:00",
+      "selected_version": "7.0.3.2",
+      "versions": [
+        {
+          "version": "7.0.3.2",
+          "path": "OSETCoreSDK/7.0.3.2/OSETCoreSDK.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/d/c/f/OSETCoreSDK/7.0.3.2/OSETCoreSDK.podspec.json",
+          "sha1": "b27a8dd882ff965af750ba86f0893e5e51e88bcb",
+          "sha256": "c3a6cb972bb1f52bc7c3fd4c73f8e55a6406b068237560bc5582053539dfb7d6",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETCoreSDK.git",
+            "tag": "7.0.3.2"
+          },
+          "dependencies": {
+            "OSETCoreAd": [
+              ">= 7.0.3.2"
+            ],
+            "AdSetQDAAdapter": [],
+            "AdSetQDCAdapter": []
+          },
+          "delivery_tag_sha": "b56dfe7768565614a37a669a384686a8cf71c8a8",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "AdSetQDJAdapter",
+      "order": 25,
+      "modified_at": "2026-09-22T09:29:32.139951+08:00",
+      "selected_version": "2.0.0.0",
+      "versions": [
+        {
+          "version": "2.0.0.0",
+          "path": "AdSetQDJAdapter/2.0.0.0/AdSetQDJAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/c/0/8/AdSetQDJAdapter/2.0.0.0/AdSetQDJAdapter.podspec.json",
+          "sha1": "22edb39550f2ea63d18fdd578836ed21c95ddf8e",
+          "sha256": "d4b5c880034e9217560b480c871ab996f2de733fe560bcd8c62d5ad51375ae84",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDJAdapter.git",
+            "tag": "2.0.0.0"
+          },
+          "dependencies": {
+            "OSETCoreAd": [],
+            "AdSetQDJAdSDK": []
+          },
+          "delivery_tag_sha": "6927e7aa8636f4273db151360836ef7ae47c25af",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "AdSetQDIAdapter",
+      "order": 26,
+      "modified_at": "2026-09-18T09:25:56.793564+08:00",
+      "selected_version": "2.0.1.0",
+      "versions": [
+        {
+          "version": "2.0.1.0",
+          "path": "AdSetQDIAdapter/2.0.1.0/AdSetQDIAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/c/7/7/AdSetQDIAdapter/2.0.1.0/AdSetQDIAdapter.podspec.json",
+          "sha1": "5e25797192754b95c4245a47e0d58b28b0895e08",
+          "sha256": "7795a9581dd554be01a52e8f35a8d052f62fd82c8d6a3abf00200384b10f9208",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDIAdapter.git",
+            "tag": "2.0.1.0"
+          },
+          "dependencies": {
+            "OSETCoreAd": [],
+            "AdSetQDIAdSDK": []
+          },
+          "delivery_tag_sha": "8785d7c34a0b9f40173da6f6edca1fea08bdb74d",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "AdSetQDBAdapter",
+      "order": 27,
+      "modified_at": "2026-09-17T15:42:53.332364+08:00",
+      "selected_version": "2.0.1.0",
+      "versions": [
+        {
+          "version": "2.0.1.0",
+          "path": "AdSetQDBAdapter/2.0.1.0/AdSetQDBAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/a/d/7/AdSetQDBAdapter/2.0.1.0/AdSetQDBAdapter.podspec.json",
+          "sha1": "ed6bfd09cdcf979a94b11da8055ca093f945c337",
+          "sha256": "48feab53c9aeaf7d919efd7e657a107add45427868fd96dea0b1edf135c7d3f7",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDBAdapter.git",
+            "tag": "2.0.1.0"
+          },
+          "dependencies": {
+            "OSETCoreAd": [],
+            "AdSetQDBAdSDK": []
+          },
+          "delivery_tag_sha": "89517f1ce5a749f420aa50f7e1c25a02bc5dcd01",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "AdSetQDJAdSDK",
+      "order": 28,
+      "modified_at": "2026-09-09T12:05:37.007000+08:00",
+      "selected_version": "1.0.0.3",
+      "versions": [
+        {
+          "version": "1.0.0.3",
+          "path": "AdSetQDJAdSDK/1.0.0.3/AdSetQDJAdSDK.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/9/2/0/AdSetQDJAdSDK/1.0.0.3/AdSetQDJAdSDK.podspec.json",
+          "sha1": "03fb39c745f307a04a89e557abeae3f99f778bdf",
+          "sha256": "a4c061d85626ac6a6253f36590bd0e7743d08ba02e00d2d11fcb97394ba880cb",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDJAdSDK.git",
+            "tag": "1.0.0.3"
+          },
+          "dependencies": {},
+          "delivery_tag_sha": "aedaa72d7114f0314a715fd211af2c15138cf09b",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETToAdScopeAdapter",
+      "order": 29,
+      "modified_at": "2026-09-04T17:33:24.429055+08:00",
+      "selected_version": "1.0.0.1",
+      "versions": [
+        {
+          "version": "1.0.0.1",
+          "path": "OSETToAdScopeAdapter/1.0.0.1/OSETToAdScopeAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/b/7/2/OSETToAdScopeAdapter/1.0.0.1/OSETToAdScopeAdapter.podspec.json",
+          "sha1": "c6a186be439eec89c36dcbe147c46a5c974898fa",
+          "sha256": "c6c4a7c4ea838b6364cbc93369cf50deca2c988e17cc2d1cc3e6c15e19d621ff",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETToAdScopeAdapter.git",
+            "tag": "1.0.0.1"
+          },
+          "dependencies": {
+            "OSETCoreAd": [],
+            "AMPSAdSDK": []
+          },
+          "delivery_tag_sha": "2963354414c4c4654cf0491ae2e4f2d5a8b85799",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "AdSetQDBAdSDK",
+      "order": 30,
+      "modified_at": "2026-08-26T13:30:08.855238+08:00",
+      "selected_version": "7.9.4.37",
+      "versions": [
+        {
+          "version": "7.9.4.37",
+          "path": "AdSetQDBAdSDK/7.9.4.37/AdSetQDBAdSDK.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/6/a/4/AdSetQDBAdSDK/7.9.4.37/AdSetQDBAdSDK.podspec.json",
+          "sha1": "42577536a7b1e1890d84d4a85c097629f7daf268",
+          "sha256": "f409febba81a851b83cf8a886bab7311b5382709536351daea07cc1f51159dd7",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDBAdSDK.git",
+            "tag": "7.9.4.37"
+          },
+          "dependencies": {},
+          "delivery_tag_sha": "5464b5ead5c853d58e28da339fcd6e1f5c181574",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETCoreAdToYQAdapter",
+      "order": 31,
+      "modified_at": "2026-08-12T15:16:23.219226+08:00",
+      "selected_version": "1.0.0.0",
+      "versions": [
+        {
+          "version": "1.0.0.0",
+          "path": "OSETCoreAdToYQAdapter/1.0.0.0/OSETCoreAdToYQAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/d/0/f/OSETCoreAdToYQAdapter/1.0.0.0/OSETCoreAdToYQAdapter.podspec.json",
+          "sha1": "cbaafe6fe1715615db9a651b84d6b51917276ff3",
+          "sha256": "6b3abd72d0240c7f417d257a8d3a97db98777fc4636478ccf9d070a70b98dcca",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETCoreAdToYQAdapter.git",
+            "tag": "1.0.0.0"
+          },
+          "dependencies": {
+            "OSETCoreAd": [],
+            "MediatomiOS": []
+          },
+          "delivery_tag_sha": "ae5ac8c38374643658868cd5472d4181ee57ed5e",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "AdSetQDIAdSDK",
+      "order": 32,
+      "modified_at": "2026-08-06T17:06:12.391927+08:00",
+      "selected_version": "6.5.75.3",
+      "versions": [
+        {
+          "version": "6.5.75.3",
+          "path": "AdSetQDIAdSDK/6.5.75.3/AdSetQDIAdSDK.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/d/5/2/AdSetQDIAdSDK/6.5.75.3/AdSetQDIAdSDK.podspec.json",
+          "sha1": "66693b5bd321d32f47477b975cb30c966c61a8f9",
+          "sha256": "2ec17fc2ee1ca2bf0eb58b3a7163a5add03df881d9921bf5ec2471a411789ccf",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDIAdSDK.git",
+            "tag": "6.5.75.3"
+          },
+          "dependencies": {},
+          "delivery_tag_sha": "f897adfacfdaa8ec416a24ad77fd8d151339adae",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETCoreSDK-E",
+      "order": 34,
+      "modified_at": "2026-07-09T14:51:42.476621+08:00",
+      "selected_version": "6.6.9.8",
+      "versions": [
+        {
+          "version": "6.6.9.8",
+          "path": "OSETCoreSDK-E/6.6.9.8/OSETCoreSDK-E.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/8/4/1/OSETCoreSDK-E/6.6.9.8/OSETCoreSDK-E.podspec.json",
+          "sha1": "58145d2fb3093a7d085b22c73ed27dee685f024d",
+          "sha256": "22985b8106c12b349158e275443e7c91af444e8efb86caa37c19468534a9812c",
+          "source": {
+            "git": "https://github.com/YHF-9527/OSETCoreSDK-E.git",
+            "tag": "6.6.9.8"
+          },
+          "dependencies": {
+            "OSETCoreAd": [],
+            "OSETGDTAdapter": [
+              "1.0.1"
+            ]
+          },
+          "delivery_tag_sha": "50070f718f028103f5b9d8ae2c7033502f4dbeee",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETSDK-H",
+      "order": 35,
+      "modified_at": "2026-06-24T13:26:35.236790+08:00",
+      "selected_version": "6.6.8.6",
+      "versions": [
+        {
+          "version": "6.6.8.6",
+          "path": "OSETSDK-H/6.6.8.6/OSETSDK-H.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/3/5/f/OSETSDK-H/6.6.8.6/OSETSDK-H.podspec.json",
+          "sha1": "27d24efe97535249a085b601b9db04a852efad08",
+          "sha256": "cae8ff2ff3ea3c47793bca7f3d0f84ea058f1d7c02a1f3cb1a5f8aee6b41b8b8",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETSDK-H.git",
+            "tag": "6.6.8.6"
+          },
+          "dependencies": {},
+          "delivery_tag_sha": "016ad9dc059a2b57b974590bbd17cf12bff753d0",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETCoreToGMAdapter-BF",
+      "order": 36,
+      "modified_at": "2026-06-22T19:44:59.180117+08:00",
+      "selected_version": "6.6.3.3",
+      "versions": [
+        {
+          "version": "6.6.3.3",
+          "path": "OSETCoreToGMAdapter-BF/6.6.3.3/OSETCoreToGMAdapter-BF.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/9/6/4/OSETCoreToGMAdapter-BF/6.6.3.3/OSETCoreToGMAdapter-BF.podspec.json",
+          "sha1": "1d20f91076703836ed47e55db1d48e1a02578b2d",
+          "sha256": "216b2867ca92777088ec0b93c5ea2a6fd3d4984b0e46db471e9b0ac06ced8ebc",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETCoreToGMAdapter-BF.git",
+            "tag": "6.6.3.3"
+          },
+          "dependencies": {
+            "OSETCodeSDK-BF": [
+              ">=6.6.2.7"
+            ],
+            "Ads-CN/BUAdSDK": [],
+            "Ads-CN/CSJMediation": []
+          },
+          "delivery_tag_sha": "b0fa36aab2d03094f85aada67e8f35c469875256",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETSDK",
+      "order": 37,
+      "modified_at": "2026-06-18T13:30:37.096955+08:00",
+      "selected_version": "6.6.7.6",
+      "versions": [
+        {
+          "version": "6.6.7.6",
+          "path": "OSETSDK/6.6.7.6/OSETSDK.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/8/5/d/OSETSDK/6.6.7.6/OSETSDK.podspec.json",
+          "sha1": "f74e4ef2be51af492b7e74be762098289bae1f17",
+          "sha256": "0ad9da7ee956cdab03dac7c94c9eb0a3cd267aab9529dfece7467edeaf4603a9",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETSDK.git",
+            "tag": "6.6.7.6"
+          },
+          "dependencies": {
+            "GDTMobSDK": [
+              ">= 4.15.40"
+            ],
+            "KSAdSDK": [],
+            "Ads-CN": [
+              ">= 6.9.0.6"
+            ],
+            "SigmobAd-iOS": [
+              ">= 4.19.0"
+            ],
+            "BaiduMobAdSDK": [
+              ">= 5.373"
+            ],
+            "BeiZiSDK-iOS/BeiZiSDK-iOS": [],
+            "OctopusSDK": [
+              ">= 1.6.3.4"
+            ],
+            "TanxSDK": [
+              ">= 3.7.8"
+            ],
+            "JADYun": [
+              ">= 2.6.6"
+            ],
+            "QuMengAdSDK": [
+              ">= 1.3.1"
+            ],
+            "AdSetQDAAdSDK": [],
+            "AdSetQDBAdSDK": [
+              ">= 7.7.4.31"
+            ],
+            "AdSetQDCAdSDK": [],
+            "AdSetQDDAdSDK": []
+          },
+          "delivery_tag_sha": "32fd1946a843a0515040bc2cfa90b90cae8ce095",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "AdSetQDCAdSDK",
+      "order": 38,
+      "modified_at": "2026-06-05T17:07:53.577465+08:00",
+      "selected_version": "7.7.4.32",
+      "versions": [
+        {
+          "version": "7.7.4.32",
+          "path": "AdSetQDCAdSDK/7.7.4.32/AdSetQDCAdSDK.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/c/7/b/AdSetQDCAdSDK/7.7.4.32/AdSetQDCAdSDK.podspec.json",
+          "sha1": "3b0601e9a27c58703bfb5118178e2b47bbac1b9f",
+          "sha256": "18ea9f1ae876859b2a3edb2d91609124f2e2699033f61a67f9a24de89469b3bd",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDCAdSDK.git",
+            "tag": "7.7.4.32"
+          },
+          "dependencies": {},
+          "delivery_tag_sha": "36a3860545e56f0eddd64c9c97bffab5cc2ac5f3",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "AdSetQDEAdSDK",
+      "order": 39,
+      "modified_at": "2026-05-29T09:59:59.233008+08:00",
+      "selected_version": "1.0.0",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "AdSetQDEAdSDK/1.0.0/AdSetQDEAdSDK.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/1/6/d/AdSetQDEAdSDK/1.0.0/AdSetQDEAdSDK.podspec.json",
+          "sha1": "1828dba89147592b4a5773b05fe3a8bccb674a62",
+          "sha256": "020c5ecc2daf59481bdb24e2331b235c5a62717ae124d0c4a79ce5edfd506d7e",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDEAdSDK.git",
+            "tag": "1.0.0"
+          },
+          "dependencies": {},
+          "delivery_tag_sha": "7aa52ec1ea59b2289999c651fca9ce00298da747",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETToGMAdapter",
+      "order": 40,
+      "modified_at": "2026-05-22T18:03:00.004002+08:00",
+      "selected_version": "6.6.3.6",
+      "versions": [
+        {
+          "version": "6.6.3.6",
+          "path": "OSETToGMAdapter/6.6.3.6/OSETToGMAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/0/3/6/OSETToGMAdapter/6.6.3.6/OSETToGMAdapter.podspec.json",
+          "sha1": "b3172712ff92444f3b8064ffd9c21b43590e7fbe",
+          "sha256": "421b47fdc7e87dd4916708a8d111e203214ca8c8d3cbaf1c1eea8cdc86ded323",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETToGMAdapter.git",
+            "tag": "6.6.3.6"
+          },
+          "dependencies": {
+            "OSETSDK": [
+              ">=6.6.0.0"
+            ]
+          },
+          "delivery_tag_sha": "89a4442f75cf56c09e1e356f2883c696ef0be6fe",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "AdSetQDDAdSDK",
+      "order": 41,
+      "modified_at": "2026-05-13T15:51:26.192730+08:00",
+      "selected_version": "1.3.0.0",
+      "versions": [
+        {
+          "version": "1.3.0.0",
+          "path": "AdSetQDDAdSDK/1.3.0.0/AdSetQDDAdSDK.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/7/b/3/AdSetQDDAdSDK/1.3.0.0/AdSetQDDAdSDK.podspec.json",
+          "sha1": "7080caf9d0c94fc70312c20a3f67a9c39437dfb0",
+          "sha256": "a243a12d9d17a1f279d4e5891efc505b4132dda066443785ab0518798c6be0df",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDDAdSDK.git",
+            "tag": "1.3.0.0"
+          },
+          "dependencies": {},
+          "delivery_tag_sha": "f7d69487f90e835d64b761140b27cca0d039acd5",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETToTakuLowAdapter",
+      "order": 42,
+      "modified_at": "2026-03-16T15:58:34.337839+08:00",
+      "selected_version": "6.6.2.5",
+      "versions": [
+        {
+          "version": "6.6.2.5",
+          "path": "OSETToTakuLowAdapter/6.6.2.5/OSETToTakuLowAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/8/1/9/OSETToTakuLowAdapter/6.6.2.5/OSETToTakuLowAdapter.podspec.json",
+          "sha1": "2598c6df8af4723a1b048b9d7b8109f71d932e19",
+          "sha256": "6d2a57f0d54abf612b3f5ca67d785efb5bedac99cd2c5f6e17cd5a84ef82b882",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETToTakuLowAdapter.git",
+            "tag": "6.6.2.5"
+          },
+          "dependencies": {
+            "OSETSDK": [
+              ">=6.6.2.5"
+            ],
+            "AnyThinkiOS": [
+              "<6.4.94"
+            ]
+          },
+          "delivery_tag_sha": "4c0e9f0296980134f45a77202ccae849bf5b2ff5",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETQMSDK",
+      "order": 43,
+      "modified_at": "2026-02-25T16:58:56.478788+08:00",
+      "selected_version": "6.6.1.5",
+      "versions": [
+        {
+          "version": "6.6.1.5",
+          "path": "OSETQMSDK/6.6.1.5/OSETQMSDK.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/f/1/0/OSETQMSDK/6.6.1.5/OSETQMSDK.podspec.json",
+          "sha1": "9a7b92935c6ecf79dc4564b4ffd8fbdb097fbb90",
+          "sha256": "dfdca558a500fbd981e3394ab1cf4e9e8ff21df831418de9cc7a9ded87a3e779",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETQMSDK.git",
+            "tag": "6.6.1.5"
+          },
+          "dependencies": {
+            "QuMengAdSDK": [
+              ">= 1.3.1",
+              "< 1.3.7"
+            ]
+          },
+          "delivery_tag_sha": "283c5044d5a8bbb33315644b8ffe78c2db85b1f6",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETQMToBidRCAdapter",
+      "order": 44,
+      "modified_at": "2026-01-29T18:07:46.048123+08:00",
+      "selected_version": "6.6.2.0",
+      "versions": [
+        {
+          "version": "6.6.2.0",
+          "path": "OSETQMToBidRCAdapter/6.6.2.0/OSETQMToBidRCAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/d/1/a/OSETQMToBidRCAdapter/6.6.2.0/OSETQMToBidRCAdapter.podspec.json",
+          "sha1": "b9d4ab96e8e00185027b67f6cd498852e5c6a09d",
+          "sha256": "990fbd90059328c579031c2dd0893445341f600db27e0e7cfd295d58085d7ece",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETQMToBidRCAdapter.git",
+            "tag": "6.6.2.0"
+          },
+          "dependencies": {
+            "OSETQMSDK": [],
+            "ToBid-iOS-RC": []
+          },
+          "delivery_tag_sha": "67895608045b2ccff73d21efe1ef969fed21685b",
+          "tag_spec_matches_canonical": false
+        }
+      ],
+      "notes": [
+        "The official specification and the delivery tag root podspec have version metadata differences; original official bytes are preserved."
+      ]
+    },
+    {
+      "name": "OSETToTaku115Adapter",
+      "order": 46,
+      "modified_at": "2026-01-04T11:09:52.873585+08:00",
+      "selected_version": "6.6.2.5",
+      "versions": [
+        {
+          "version": "6.6.2.5",
+          "path": "OSETToTaku115Adapter/6.6.2.5/OSETToTaku115Adapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/0/e/8/OSETToTaku115Adapter/6.6.2.5/OSETToTaku115Adapter.podspec.json",
+          "sha1": "f892b3ddd3c8321fdc82bc4c63753dbdeb0f718c",
+          "sha256": "cb9e6dfd5382407c67138fed10e47853706d553f964a103c438f602ee6ddab0c",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETToTaku115Adapter.git",
+            "tag": "6.6.2.5"
+          },
+          "dependencies": {
+            "OSETSDKNoCSJ": [
+              ">=6.6.2.5"
+            ],
+            "AnyThinkiOS": [
+              "<6.4.94"
+            ]
+          },
+          "delivery_tag_sha": "aab3c83b68ae9a7cdc2b92568c10c3c5f9e50fe1",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETSDKNoCSJ",
+      "order": 47,
+      "modified_at": "2026-01-04T11:03:33.402058+08:00",
+      "selected_version": "6.6.2.5",
+      "versions": [
+        {
+          "version": "6.6.2.5",
+          "path": "OSETSDKNoCSJ/6.6.2.5/OSETSDKNoCSJ.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/2/5/4/OSETSDKNoCSJ/6.6.2.5/OSETSDKNoCSJ.podspec.json",
+          "sha1": "12eb0277f22fcc594694598d2aeec6a25d1e6518",
+          "sha256": "7e87ce8fe4ee65362260b436b5e1d72434290a651e31bc7517675580821ba81c",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETSDKNoCSJ.git",
+            "tag": "6.6.2.5"
+          },
+          "dependencies": {
+            "GDTMobSDK": [
+              ">= 4.15.40"
+            ],
+            "KSAdSDK": [],
+            "SigmobAd-iOS": [
+              ">= 4.19.0"
+            ],
+            "BaiduMobAdSDK": [
+              ">= 5.373"
+            ],
+            "BeiZiSDK-iOS/BeiZiSDK-iOS": [],
+            "OctopusSDK": [
+              ">= 1.6.3.4"
+            ],
+            "TanxSDK": [
+              ">= 3.7.8"
+            ],
+            "JADYun": [
+              ">= 2.6.6"
+            ],
+            "QuMengAdSDK": [
+              ">= 1.3.1"
+            ]
+          },
+          "delivery_tag_sha": "5ec76d39b26b155bd4483c1e1ca811c5d1bd2288",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETToTopOnAdapter",
+      "order": 48,
+      "modified_at": "2025-12-31T15:43:53.360237+08:00",
+      "selected_version": "6.6.2.5",
+      "versions": [
+        {
+          "version": "6.6.2.5",
+          "path": "OSETToTopOnAdapter/6.6.2.5/OSETToTopOnAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/e/0/b/OSETToTopOnAdapter/6.6.2.5/OSETToTopOnAdapter.podspec.json",
+          "sha1": "3b43b63f10c6dd6cf5d5d30306feda3a71c2f12a",
+          "sha256": "16861ff7b0ef40aefd2eb3f194a725ff30a512e12ac39c19199f43e1987df5bd",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETToTopOnAdapter.git",
+            "tag": "6.6.2.5"
+          },
+          "dependencies": {
+            "OSETSDK": [
+              ">=6.6.2.5"
+            ],
+            "TPNiOS": [
+              ">=6.5.31"
+            ]
+          },
+          "delivery_tag_sha": "81dbfa502afb2cfe72eec0e7b4a9629ea2d8a636",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETToTakuAdapter",
+      "order": 49,
+      "modified_at": "2025-12-30T13:49:21.536546+08:00",
+      "selected_version": "6.6.2.4",
+      "versions": [
+        {
+          "version": "6.6.2.4",
+          "path": "OSETToTakuAdapter/6.6.2.4/OSETToTakuAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/a/c/8/OSETToTakuAdapter/6.6.2.4/OSETToTakuAdapter.podspec.json",
+          "sha1": "fe9b51c9fb9e841d751a9a06548a9857a3a930e2",
+          "sha256": "5207cc30eb972ad3480102cbbbb98200c84d75921fbca4c31265c57efcf63514",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETToTakuAdapter.git",
+            "tag": "6.6.2.4"
+          },
+          "dependencies": {
+            "OSETSDK": [
+              ">=6.6.2.4"
+            ],
+            "AnyThinkiOS": [
+              ">=6.5.31"
+            ]
+          },
+          "delivery_tag_sha": "b4110ace3451ae3776d2ba83394d47d106337c02",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "OSETQMToBidAdapter",
+      "order": 50,
+      "modified_at": "2025-11-11T11:47:35.648711+08:00",
+      "selected_version": "6.6.0.2",
+      "versions": [
+        {
+          "version": "6.6.0.2",
+          "path": "OSETQMToBidAdapter/6.6.0.2/OSETQMToBidAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/c/b/d/OSETQMToBidAdapter/6.6.0.2/OSETQMToBidAdapter.podspec.json",
+          "sha1": "b382ff06288e59a1d90f8cd3c766f346d292890e",
+          "sha256": "79e5c48793c5afd1659b5dbde52e083bd6bfa6cdd8db555a6e05b22bb11ac5e7",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETQMToBidAdapter.git",
+            "tag": "6.6.0.2"
+          },
+          "dependencies": {
+            "OSETQMSDK": [],
+            "ToBid-iOS": []
+          },
+          "delivery_tag_sha": "e0687a08cf07f354f3ca8c2847e44422badb7e30",
+          "tag_spec_matches_canonical": true
+        }
+      ]
+    }
+  ]
+}

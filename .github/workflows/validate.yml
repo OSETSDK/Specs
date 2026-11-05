@@ -1,0 +1,35 @@
+name: Validate Specs
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      # Official actions/checkout v4 commit, verified against its upstream tag.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Run validator regression checks
+        run: python3 -m unittest discover -s .github/scripts -p 'test_*.py' -v
+      - name: Verify original bytes and immutable released versions
+        env:
+          BASE_REF: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+        shell: bash
+        run: |
+          arguments=()
+          if [[ -n "${BASE_REF}" && ! "${BASE_REF}" =~ ^0+$ ]]; then
+            if ! git cat-file -e "${BASE_REF}^{commit}"; then
+              git fetch --no-tags origin "${BASE_REF}"
+            fi
+            arguments=(--base-ref "${BASE_REF}")
+          fi
+          python3 .github/scripts/validate_specs.py "${arguments[@]}"
