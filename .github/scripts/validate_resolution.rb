@@ -51,8 +51,18 @@ specs = spec_paths.map do |path|
   end
   [spec.name, spec, path]
 end
-duplicates = specs.group_by(&:first).select { |_name, entries| entries.length != 1 }.keys
-abort "Expected one migrated version per Pod; found multiple: #{duplicates.join(', ')}" unless duplicates.empty?
+manifest_path = repo_path.join('specs-manifest.json')
+if manifest_path.file?
+  entries = JSON.parse(manifest_path.read).fetch('pods')
+  chosen = entries.to_h { |entry| [entry.fetch('name'), entry.fetch('selected_version')] }
+  order = entries.to_h { |entry| [entry.fetch('name'), entry.fetch('order')] }
+  specs.select! { |name, spec, _path| chosen[name] == spec.version.to_s }
+  missing = chosen.keys - specs.map(&:first)
+  abort "Manifest selected versions missing: #{missing.join(', ')}" unless missing.empty?
+  specs.sort_by! { |name, _spec, _path| order.fetch(name) }
+else
+  specs = specs.group_by(&:first).map { |_name, versions| versions.max_by { |_n, spec, _p| spec.version } }
+end
 unknown = options[:pods] - specs.map(&:first)
 abort "Requested Pod is not present: #{unknown.join(', ')}" unless unknown.empty?
 specs.select! { |name, _spec, _path| options[:pods].include?(name) } unless options[:pods].empty?

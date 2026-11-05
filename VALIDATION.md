@@ -13,6 +13,9 @@
 | 独立完整依赖解析 | 48 / 48 | 每个根 Pod 单独解析，使用候选 Specs 与公共 CDN，无旧锁文件 |
 | 维护脚本回归测试 | 38 / 38 | 原字节保存、幂等同步、拒绝未发布版本、不可变版本、路径和清单检查 |
 | 官方同步脚本网络预览 | 通过 | OSETCoreAd 7.0.3.5 确认为原字节一致，无写入 |
+| 匿名远端克隆 | 48 / 48 | 从公开 HTTPS 仓库重新克隆，清单和全部原字节校验通过 |
+| GitHub Actions | 通过 | [首次云端运行](https://github.com/OSETSDK/Specs/actions/runs/41984503569)，包含 38 项回归和规格清单检查 |
+| 后续版本选择 | 通过 | 同一 Pod 保留多个版本的独立 fixture 只验证 selected_version |
 
 依赖解析基线为 iOS 12.0；若根规格要求更高则使用其最低版本。`OSETHXAdapter 2.0.2.2` 使用 iOS 13.0，其余根规格使用 iOS 12.0。这个检查验证元数据和递归依赖可解析，不会下载 SDK 产物或构建客户 App。
 
@@ -37,7 +40,21 @@
 
 ## 安装与构建验收
 
-48 个根 Pod 的完整 SDK 下载、模拟器构建、真机构建和广告功能验收没有由上述元数据检查替代。代表性 BF 工程的独立冷缓存安装与构建结果将在实际执行后追加；其余 Pod 的实际平台行为继续遵循既有 SDK 发版验证。
+代表性工程使用真实公开源 `https://github.com/OSETSDK/Specs.git` 与公共 CDN，唯一顶层声明为 `OSETCoreSDK-BF 7.0.3.3`，不使用逐 Pod 的 `:source` 或额外顶层 SDK。实际安装完成，共 9 个根 Pod。已保存[本次锁文件](.github/fixtures/bf-7.0.3.3-Podfile.lock)。
+
+最终锁文件中，BF、B/F Adapter 和 B/F SDK 来自 OSET Specs；Core 7.0.3.5、Ads-CN 7.8.1.1、AliyunLogProducer 4.3.3、BUTTSDKFramework 1.48.2.3-premium 来自公共源。Core 的 SHA1 为 `913be90e79a0f5c6061eab38be089abd5658c672`，与新 Specs 中的原始规格一致。
+
+实际构建使用 Xcode 26.4、独立 workspace 和 DerivedData、Debug 配置，禁用签名。
+
+| BF 代表性构建 | 结果 |
+|---|---|
+| generic iOS device arm64 | BUILD SUCCEEDED |
+| generic iOS Simulator x86_64 | BUILD SUCCEEDED |
+| generic iOS Simulator arm64 | 未通过，受下述既有第三方架构排除配置限制 |
+
+AliyunLogProducer 4.3.3 的官方规格在 pod_target_xcconfig 和 user_target_xcconfig 中设置 `EXCLUDED_ARCHS[sdk=iphonesimulator*] = arm64 i386`。指定 arm64 模拟器构建时，ARCHS 为空，生成的 Embed Frameworks 脚本报 `ARCHS[@]: unbound variable`。本次没有修改该第三方规格，也没有据此改动 OSET 同版本规格或二进制。
+
+这些结果不等于全部 48 个 Pod 已完成实际构建或广告功能验证。其余 Pod 的实际平台行为继续遵循既有 SDK 发版验证；本次没有运行广告初始化、曝光、点击或收益相关功能。
 
 ## 复核方式
 
@@ -46,4 +63,4 @@ python3 .github/scripts/validate_specs.py
 python3 -m unittest discover -s .github/scripts -p 'test_*.py'
 ```
 
-完整依赖解析工具为 `.github/scripts/validate_resolution.rb`，使用 CocoaPods 1.16.2。运行前把 CP_HOME_DIR、CP_CACHE_DIR、CP_REPOS_DIR 和 TMPDIR 指向工作区外专用临时目录，并把报告输出到 Specs 仓库之外；工具会拒绝常规全局 CocoaPods 目录。它不执行 SDK 下载、构建或发布。
+完整依赖解析工具为 `.github/scripts/validate_resolution.rb`，使用 CocoaPods 1.16.2。运行前把 CP_HOME_DIR、CP_CACHE_DIR、CP_REPOS_DIR 和 TMPDIR 指向工作区外专用临时目录，并把报告输出到 Specs 仓库之外；工具会拒绝常规全局 CocoaPods 目录，并按清单顺序验证各 Pod 的 selected_version；后续追加版本时仍可保留已发布目录。它不执行 SDK 下载、构建或发布。
