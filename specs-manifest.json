@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "selection": "Latest officially published version of each included Pod at migration time; older versions are not imported.",
+  "selection": "Initial migration imports the latest officially published version of each included Pod; subsequent direct OSET delivery releases are appended without modifying existing version bytes.",
   "pods": [
     {
       "name": "OSETCoreSDK-BF",
@@ -1303,6 +1303,29 @@
           },
           "delivery_tag_sha": "e0687a08cf07f354f3ca8c2847e44422badb7e30",
           "tag_spec_matches_canonical": true
+        }
+      ]
+    },
+    {
+      "name": "AdSetQDMAdSDK",
+      "order": 51,
+      "modified_at": "2026-11-06T05:48:04.152462+00:00",
+      "selected_version": "1.4.16",
+      "publication_origin": "direct_delivery",
+      "versions": [
+        {
+          "version": "1.4.16",
+          "path": "AdSetQDMAdSDK/1.4.16/AdSetQDMAdSDK.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/OSETSDK/AdSetQDMAdSDK/1.4.16/AdSetQDMAdSDK.podspec.json",
+          "sha1": "50d025e53282a40af9d9c1be8178dea0a8f453a3",
+          "sha256": "a19599a9d95f93f9f1783c5bd3bb09ff58ed3a792f0a59fc4130e292651fc016",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDMAdSDK.git",
+            "tag": "1.4.16"
+          },
+          "dependencies": {},
+          "delivery_tag_sha": "f4fbcac79e18a0ec3c80b3085adf732051807d7a",
+          "publication_origin": "direct_delivery"
         }
       ]
     }

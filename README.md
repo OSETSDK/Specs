@@ -4,6 +4,16 @@ OSET SDK 的统一 CocoaPods 规格索引。SDK 源码、二进制和资源继�
 
 2026 年 11 月 5 日首批迁移范围为本地分发目录中各 Pod 在 CocoaPods 官方源已发布的最新版本，共 48 个 Pod。初始迁移不收录更早版本，也不首次发布尚未确认的本地版本。每份规格保留官方原始 JSON 字节与依赖声明。
 
+后续新版本可以直接在 OSET 交付仓库发布并登记到本索引。规格清单同时保留首批官方来源和后续交付 tag 来源；已登记版本保持原始字节不变。
+
+## 后续直接发布
+
+| 发布日期 | Pod | 版本 | 交付仓库 |
+|---|---|---|---|
+| 2026-11-06 | `AdSetQDMAdSDK` | `1.4.16` | [AdSetQDMAdSDK](https://github.com/OSETSDK/AdSetQDMAdSDK/tree/1.4.16) |
+
+M 渠道 SDK 是动态 XCFramework；OSET 聚合接入还需要对应 Adapter 与包含渠道注册的 Core。单独安装渠道 SDK 不代表已完成 OSET 渠道接入。当前收录版本以 `specs-manifest.json` 为准。
+
 ## 客户接入
 
 在项目原有 Podfile 中加入 OSET 源，并保留公共源及项目原有的其他厂商源。原有 platform、target、use_frameworks! 和 post_install 设置按项目需要保留。
@@ -119,7 +129,7 @@ python3 -m unittest discover -s .github/scripts -p 'test_*.py'
 
 ## 校验与版本稳定性
 
-`specs-manifest.json` 记录每份规格的官方来源 URL、SHA1、SHA256、交付 tag SHA 和依赖。SHA1 对应原始规格字节，迁移不会格式化或重写这些 JSON。离线校验脚本检查清单、规格、路径和校验值的一致性；CI 会将更改或删除已发布规格的提交标记为检查失败。
+`specs-manifest.json` 记录每份规格的来源 URL、SHA1、SHA256、交付 tag SHA 和依赖。来源包括首批官方 Specs 和后续 OSET 交付 tag。SHA1 对应原始规格字节，登记不会格式化或重写这些 JSON。离线校验脚本检查清单、规格、路径和校验值的一致性；CI 会将更改或删除已发布规格的提交标记为检查失败。
 
 完整依赖解析、实际下载安装、模拟器与真机构建、广告功能是不同的验收层级。验证范围和结果见 [VALIDATION.md](VALIDATION.md)。初始迁移不改交付文件、不改变最低系统版本或依赖约束。
 

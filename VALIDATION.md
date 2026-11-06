@@ -64,3 +64,20 @@ python3 -m unittest discover -s .github/scripts -p 'test_*.py'
 ```
 
 完整依赖解析工具为 `.github/scripts/validate_resolution.rb`，使用 CocoaPods 1.16.2。运行前把 CP_HOME_DIR、CP_CACHE_DIR、CP_REPOS_DIR 和 TMPDIR 指向工作区外专用临时目录，并把报告输出到 Specs 仓库之外；工具会拒绝常规全局 CocoaPods 目录，并按清单顺序验证各 Pod 的 selected_version；后续追加版本时仍可保留已发布目录。它不执行 SDK 下载、构建或发布。
+
+## 2026-11-06 直接发布 M SDK
+
+新增 `AdSetQDMAdSDK 1.4.16` 的直接交付规格。原有 48 份官方来源 JSON 保持原始字节，新增规格与公开交付 tag 中的 JSON 原字节一致。
+
+| 检查 | 结果 |
+|---|---|
+| 公开交付 tag | `f4fbcac79e18a0ec3c80b3085adf732051807d7a` |
+| 全新隔离 CocoaPods 从真实 Git tag 安装 | 通过；下载后的 71 个 XCFramework 文件与原厂 ZIP 提取件逐文件 SHA256 相同 |
+| Podspec SHA1 / CocoaPods checksum | `50d025e53282a40af9d9c1be8178dea0a8f453a3` |
+| 本地路径 SDK-only：arm64 真机架构 | 编译、链接、动态框架嵌入通过 |
+| 本地路径 SDK-only：x86_64 模拟器 | 编译、链接、动态框架嵌入通过 |
+| 本地路径 SDK-only：arm64 模拟器，iOS 14.0 | 编译、链接、动态框架嵌入通过 |
+| 原厂资源 | 三种配置均保留框架内 `Assets.car` 与 `PrivacyInfo.xcprivacy` |
+| 直接交付登记工具 | 57 项回归通过；[工具提交的云端验证](https://github.com/OSETSDK/Specs/actions/runs/42155174362)通过 |
+
+SDK 是动态 XCFramework，原包内容未改动。以上构建禁用签名，没有运行广告初始化、真实广告、奖励或点击流程；远端 tag 安装完整性与本地路径构建分别记录，不等同于广告功能验收。M Adapter 及其 Core 依赖在各自版本完成登记和联验后单独记录。
