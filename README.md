@@ -11,8 +11,26 @@ OSET SDK 的统一 CocoaPods 规格索引。SDK 源码、二进制和资源继�
 | 发布日期 | Pod | 版本 | 交付仓库 |
 |---|---|---|---|
 | 2026-11-06 | `AdSetQDMAdSDK` | `1.4.16` | [AdSetQDMAdSDK](https://github.com/OSETSDK/AdSetQDMAdSDK/tree/1.4.16) |
+| 2026-11-06 | `OSETCoreAd` | `7.0.4.0` | [OSETCoreAd](https://github.com/OSETSDK/OSETCoreAd/tree/7.0.4.0) |
+| 2026-11-06 | `AdSetQDMAdapter` | `2.0.0.0` | [AdSetQDMAdapter](https://github.com/OSETSDK/AdSetQDMAdapter/tree/2.0.0.0) |
 
-M 渠道 SDK 是动态 XCFramework；OSET 聚合接入还需要对应 Adapter 与包含渠道注册的 Core。单独安装渠道 SDK 不代表已完成 OSET 渠道接入。当前收录版本以 `specs-manifest.json` 为准。
+M 渠道 SDK 是动态 XCFramework；OSET 聚合接入使用 `AdSetQDMAdapter 2.0.0.0`，传递依赖 `AdSetQDMAdSDK = 1.4.16` 与包含 `tuiyi` 注册的 `OSETCoreAd >= 7.0.4.0`。该 Core 使用当前源码快照，包含既有 SKT、环境机制及 `jili` 配置类型容错，继续外置依赖 `AliyunLogProducer`。单独安装渠道 SDK 不代表已完成 OSET 渠道接入。当前收录版本以 `specs-manifest.json` 为准。
+
+M 渠道接入示例：
+
+```ruby
+source 'https://github.com/OSETSDK/Specs.git'
+source 'https://cdn.cocoapods.org/'
+
+platform :ios, '12.0'
+
+target 'YourApp' do
+  pod 'AdSetQDMAdapter', '2.0.0.0'
+  pod 'OSETCoreAd', '7.0.4.0'
+end
+```
+
+支持开屏、插屏、激励视频和 Native 模板；NativeData、Banner、独立 FullscreenVideo、Draw 不开放。新建 L/N 交付仓库仅预留说明，没有发布占位规格。
 
 ## 客户接入
 
