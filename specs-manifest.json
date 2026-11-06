@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "selection": "Initial migration imports the latest officially published version of each included Pod; subsequent direct OSET delivery releases are appended without modifying existing version bytes.",
+  "selection": "Initial migration imports latest official versions; subsequent upstream and direct OSET releases retain source JSON bytes. Explicit OSET compatibility revisions record their upstream base and restricted transformation. Existing published version bytes are immutable.",
   "pods": [
     {
       "name": "OSETCoreSDK-BF",
@@ -1372,6 +1372,76 @@
           },
           "delivery_tag_sha": "ada672524eea30c468ddda1fc89cdef678aa5fc1",
           "publication_origin": "direct_delivery"
+        }
+      ]
+    },
+    {
+      "name": "AliyunLogProducer",
+      "order": 53,
+      "modified_at": "2026-11-06T06:19:29.009419+00:00",
+      "selected_version": "4.3.3.1",
+      "versions": [
+        {
+          "version": "4.3.3",
+          "path": "AliyunLogProducer/4.3.3/AliyunLogProducer.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/b/b/4/AliyunLogProducer/4.3.3/AliyunLogProducer.podspec.json",
+          "sha1": "889e71ee9e0fd0e49c03097dd806196549f8a873",
+          "sha256": "5f8213a56e124d2d8a289ac42609bdd02b823ac4c3b88137d259adfed4e1b269",
+          "source": {
+            "git": "https://gitee.com/aliyun-sls/aliyun-log-ios-sdk.git",
+            "tag": "4.3.3"
+          },
+          "dependencies": {}
+        },
+        {
+          "version": "4.3.3.1",
+          "path": "AliyunLogProducer/4.3.3.1/AliyunLogProducer.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/b/b/4/AliyunLogProducer/4.3.3/AliyunLogProducer.podspec.json",
+          "origin_url_role": "upstream_base_spec",
+          "publication_origin": "oset_compatibility",
+          "sha1": "5a16cfb287cd555d5bab91fad5bb0204c7414cea",
+          "sha256": "45d556112cf6c80a3d4e624596f424724c168d5f91a6dc95de718eaecae1f972",
+          "source": {
+            "git": "https://gitee.com/aliyun-sls/aliyun-log-ios-sdk.git",
+            "tag": "4.3.3"
+          },
+          "dependencies": {},
+          "upstream": {
+            "name": "AliyunLogProducer",
+            "version": "4.3.3",
+            "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/b/b/4/AliyunLogProducer/4.3.3/AliyunLogProducer.podspec.json",
+            "sha1": "889e71ee9e0fd0e49c03097dd806196549f8a873",
+            "sha256": "5f8213a56e124d2d8a289ac42609bdd02b823ac4c3b88137d259adfed4e1b269",
+            "source_tag_sha": "9f12d40a8bda23d0775963401e29d6a2954c7e51"
+          },
+          "transform": {
+            "id": "aliyun-4.3.3-arm64-simulator-v1",
+            "changes": [
+              {
+                "path": [
+                  "version"
+                ],
+                "from": "4.3.3",
+                "to": "4.3.3.1"
+              },
+              {
+                "path": [
+                  "pod_target_xcconfig",
+                  "EXCLUDED_ARCHS[sdk=iphonesimulator*]"
+                ],
+                "from": "arm64 i386",
+                "to": "i386"
+              },
+              {
+                "path": [
+                  "user_target_xcconfig",
+                  "EXCLUDED_ARCHS[sdk=iphonesimulator*]"
+                ],
+                "from": "arm64 i386",
+                "to": "i386"
+              }
+            ]
+          }
         }
       ]
     }

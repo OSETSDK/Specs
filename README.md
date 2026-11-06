@@ -16,6 +16,12 @@ OSET SDK 的统一 CocoaPods 规格索引。SDK 源码、二进制和资源继�
 
 M 渠道 SDK 是动态 XCFramework；OSET 聚合接入使用 `AdSetQDMAdapter 2.0.0.0`，传递依赖 `AdSetQDMAdSDK = 1.4.16` 与包含 `tuiyi` 注册的 `OSETCoreAd >= 7.0.4.0`。该 Core 使用当前源码快照，包含既有 SKT、环境机制及 `jili` 配置类型容错，继续外置依赖 `AliyunLogProducer`。单独安装渠道 SDK 不代表已完成 OSET 渠道接入。当前收录版本以 `specs-manifest.json` 为准。
 
+## Apple Silicon 模拟器支持
+
+`AliyunLogProducer 4.3.3.1` 是 **OSET 维护的兼容规格修订**，使用上游 `4.3.3` tag 的同一套源码，不代表阿里云发布了新的 SDK。与官方 `4.3.3` 规格相比，只有版本号和两处 `EXCLUDED_ARCHS[sdk=iphonesimulator*]` 的值变化：由 `arm64 i386` 改为 `i386`。下载地址、源码、许可、系统版本和其他配置保持一致。
+
+本仓库同时保留 [官方 4.3.3 原始规格](AliyunLogProducer/4.3.3/AliyunLogProducer.podspec.json) 与 [4.3.3.1 兼容修订](AliyunLogProducer/4.3.3.1/AliyunLogProducer.podspec.json)。原规格不覆盖，Core、M Adapter 和 M SDK 的已发布 tag 与规格均不更改。兼容修订的来源、原始基底双哈希和限定变换记录在清单中；它是派生规格，不冒充上游原始 JSON。
+
 M 渠道接入示例：
 
 ```ruby
@@ -27,10 +33,19 @@ platform :ios, '12.0'
 target 'YourApp' do
   pod 'AdSetQDMAdapter', '2.0.0.0'
   pod 'OSETCoreAd', '7.0.4.0'
+  pod 'AliyunLogProducer', '4.3.3.1'
 end
 ```
 
 支持开屏、插屏、激励视频和 Native 模板；NativeData、Banner、独立 FullscreenVideo、Draw 不开放。新建 L/N 交付仓库仅预留说明，没有发布占位规格。
+
+新工程执行 `pod install --repo-update`。已有工程保留锁文件，将 Aliyun 定向更新到兼容修订：
+
+```sh
+pod update AliyunLogProducer
+```
+
+普通 `pod install` 会保留原锁定的 Aliyun 版本；修改版本要求后应执行上述定向更新，无需删除锁文件或更新其他 SDK。仅更新 Aliyun 时，Core `7.0.4.0`、M Adapter `2.0.0.0`、M SDK `1.4.16` 保持原版本。
 
 ## 客户接入
 
@@ -145,9 +160,24 @@ python3 -m unittest discover -s .github/scripts -p 'test_*.py'
 
 原生登记保留交付仓库 tag 中 JSON 的原始字节，记录 direct_delivery 来源；已有同版本内容或已登记 tag SHA 不一致时拒绝操作。后续向官方源发布同版本时，同样应保持规格和交付文件一致，不能覆盖已登记版本。
 
+## Aliyun 兼容规格的维护
+
+本次兼容修订使用单独的限定工具，官方同步和 OSET 交付登记工具保持原规则。工具固定核对官方 `4.3.3` 基底的 SHA1/SHA256，仅允许上述三个字段变更；同版本不同字节时拒绝覆盖。
+
+```sh
+# 默认预览，--apply 才在独立 Specs 克隆中追加 4.3.3.1
+python3 .github/scripts/register_aliyun_compat_spec.py
+python3 .github/scripts/register_aliyun_compat_spec.py --apply
+
+# 完全离线核对基底、派生字节、清单来源和限定变换；CI 同样执行
+python3 .github/scripts/register_aliyun_compat_spec.py --check
+```
+
+兼容规格版本是 `4.3.3.1`，下载的上游 tag 是 `4.3.3`，因此 CocoaPods lint 的“版本号应包含在 Git tag 中”提示在这里是已记录的预期警告；它不影响正常解析和安装。不得为了消除该提示而更改上游 tag 或已发布规格。
+
 ## 校验与版本稳定性
 
-`specs-manifest.json` 记录每份规格的来源 URL、SHA1、SHA256、交付 tag SHA 和依赖。来源包括首批官方 Specs 和后续 OSET 交付 tag。SHA1 对应原始规格字节，登记不会格式化或重写这些 JSON。离线校验脚本检查清单、规格、路径和校验值的一致性；CI 会将更改或删除已发布规格的提交标记为检查失败。
+`specs-manifest.json` 记录每份规格的来源 URL、SHA1、SHA256、交付 tag SHA 和依赖。官方 Specs 与 OSET 交付 tag 的登记保留上游原始 JSON；OSET 兼容修订另外标明上游基底、原始哈希和限定变换。SHA1 对应实际发布的规格字节。离线校验脚本检查清单、规格、路径和校验值的一致性；CI 会将更改或删除已发布规格的提交标记为检查失败。
 
 完整依赖解析、实际下载安装、模拟器与真机构建、广告功能是不同的验收层级。验证范围和结果见 [VALIDATION.md](VALIDATION.md)。初始迁移不改交付文件、不改变最低系统版本或依赖约束。
 

@@ -215,7 +215,7 @@ def main():
     except (ValidationError, OSError, UnicodeDecodeError, ValueError) as error:
         print(f"ERROR: {error}", file=sys.stderr)
         return 1
-    print("Validated {pods} Pods, {specs} original-byte JSON specs, "
+    print("Validated {pods} Pods, {specs} checksummed JSON specs, "
           "{immutable_specs} immutable baseline specs.".format(**result))
     return 0
 
