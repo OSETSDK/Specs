@@ -1,4 +1,4 @@
-# 首批 Specs 验证记录
+# OSET Specs 验证记录
 
 验证日期为 2026 年 11 月 5 日。首批仅收录 48 个 Pod 各自官方源最新已发布版本，不迁入更早版本，不首次发布尚未确认的本地候选。所有 Podspec 均来自 CocoaPods 官方 Specs 的原始 JSON，原始字节保持不变。
 
@@ -81,3 +81,34 @@ python3 -m unittest discover -s .github/scripts -p 'test_*.py'
 | 直接交付登记工具 | 57 项回归通过；[工具提交的云端验证](https://github.com/OSETSDK/Specs/actions/runs/42155174362)通过 |
 
 SDK 是动态 XCFramework，原包内容未改动。以上构建禁用签名，没有运行广告初始化、真实广告、奖励或点击流程；远端 tag 安装完整性与本地路径构建分别记录，不等同于广告功能验收。M Adapter 及其 Core 依赖在各自版本完成登记和联验后单独记录。
+
+## 2026-11-06 Core 7.0.4.0 与 M Adapter 2.0.0.0
+
+本轮完成后共收录 50 个 Pod、51 份规格。新增 Core `7.0.4.0`、M SDK `1.4.16`、M Adapter `2.0.0.0` 均保留公开交付 tag 中 JSON 的原始字节；原首批 48 份规格与已经登记的 M SDK 均通过不可变基线检查。Core `7.0.3.5` 继续保留。
+
+| Pod | 版本 | 交付 tag commit | 规格 SHA1 / CocoaPods checksum |
+|---|---|---|---|
+| `OSETCoreAd` | `7.0.4.0` | `ccb1d199b84a1e036954c12fdbcb70ff42c41597` | `7461fb12831f9fbe7a99557eef71aeb2bd36ebb9` |
+| `AdSetQDMAdSDK` | `1.4.16` | `f4fbcac79e18a0ec3c80b3085adf732051807d7a` | `50d025e53282a40af9d9c1be8178dea0a8f453a3` |
+| `AdSetQDMAdapter` | `2.0.0.0` | `ada672524eea30c468ddda1fc89cdef678aa5fc1` | `f5db0a76b77fa5f6ef185ae0db0ad411b222d938` |
+
+Core 使用当前源码快照，包含既有 SKT、环境机制、`jili` 配置类型容错与新增 `tuiyi` 注册。Release 真机 arm64、模拟器 arm64/x86_64 归档与打包验证通过；没有包含渠道 Adapter 或 Aliyun Producer 实现，继续使用外置 `AliyunLogProducer` 依赖。最终 36 份公开头与已发布 `7.0.3.5` 原字节相同，未把 Release 二进制没有实现的 Debug 环境切换声明放入交付头。独立 Release `jili` 配置类型检查 138/138 通过。
+
+维护工具 57/57 回归通过。三个新版本在全新隔离 CocoaPods 目录中逐根依赖解析 3/3 通过，51 份输入规格在解析前后未变；Core、M SDK 和 M Adapter 均从 OSET Specs 解析，Aliyun `4.3.3` 来自公共 CDN。
+
+发布前，本地路径组合消费者先验证了新 Core、M Adapter、M SDK 与实际外置 Aliyun `4.3.3` 的真机 arm64、模拟器 x86_64 链接。发布后，又在另一套全新 CP_HOME/CP_CACHE/TMPDIR 中，从真实公开 `https://github.com/OSETSDK/Specs.git` 安装，根声明只有 M Adapter `2.0.0.0` 与 Core `7.0.4.0`。完整锁文件见 [M 渠道消费者锁文件](.github/fixtures/m-2.0.0.0-Podfile.lock)。
+
+| 最终真实远端消费者检查 | 结果 |
+|---|---|
+| 三个 OSET Pod 的 `SPEC REPOS` | 全部为 `https://github.com/OSETSDK/Specs.git`；Aliyun `4.3.3` 为 Trunk |
+| 锁文件、下载缓存规格、索引规格 checksum | 三个 OSET Pod 全部相同；Podfile.lock 与 Manifest.lock 一致 |
+| 下载后的 vendored 文件 | Core 105、Adapter 9、SDK 71，共 185 个文件与预检输入逐 SHA256 相同；SDK 同时与原厂 ZIP 一致 |
+| `-ObjC` | 由 Podspec 自然传递；最终工程和构建命令没有手工补充该参数 |
+| generic iOS device arm64 | BUILD SUCCEEDED；6 个 M Adapter 类及 Core 类符号保留 |
+| generic iOS Simulator x86_64 | BUILD SUCCEEDED；6 个 M Adapter 类及 Core 类符号保留 |
+| 动态 SDK 集成 | 两种成功配置均确认 M SDK 的 `@rpath`、正确薄架构、`Assets.car` 和 `PrivacyInfo.xcprivacy` 原始 SHA256 |
+| generic iOS Simulator arm64 | 未通过；Aliyun `4.3.3` 官方配置排除该架构，见下方限制 |
+
+最终 arm64 模拟器失败与首批代表性消费者相同：Aliyun `4.3.3` 官方规格在 Pod 和宿主配置中排除 `arm64 i386`，导致 `ARCHS` 为空，CocoaPods Embed 脚本报 `ARCHS[@]: unbound variable`。没有覆盖第三方规格或排除配置。Core、M Adapter 的 arm64 模拟器切片各自编译通过，M SDK 的 arm64 模拟器切片已在 SDK-only iOS 14.0 工程通过；这些结果不替代完整依赖链的 arm64 模拟器验收。
+
+所有 App 构建均禁用签名，没有运行 SDK 初始化、真实广告、奖励、点击、关闭或生产后端请求。M 本轮开放初始化、开屏、插屏、激励视频和 Native 模板；NativeData、Banner、独立 FullscreenVideo、Draw 未开放。L/N 只有交付仓占位说明，没有发布 Podspec。
