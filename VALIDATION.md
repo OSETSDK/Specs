@@ -1,5 +1,7 @@
 # OSET Specs 验证记录
 
+当前 M 渠道组合的 arm64 模拟器限制已通过 OSET 兼容规格 `AliyunLogProducer 4.3.3.1` 修复，见文末验收记录。下方 `4.3.3` 的失败记录保留为历史基线。
+
 验证日期为 2026 年 11 月 5 日。首批仅收录 48 个 Pod 各自官方源最新已发布版本，不迁入更早版本，不首次发布尚未确认的本地候选。所有 Podspec 均来自 CocoaPods 官方 Specs 的原始 JSON，原始字节保持不变。
 
 ## 已完成的验证
@@ -112,3 +114,28 @@ Core 使用当前源码快照，包含既有 SKT、环境机制、`jili` 配置�
 最终 arm64 模拟器失败与首批代表性消费者相同：Aliyun `4.3.3` 官方规格在 Pod 和宿主配置中排除 `arm64 i386`，导致 `ARCHS` 为空，CocoaPods Embed 脚本报 `ARCHS[@]: unbound variable`。没有覆盖第三方规格或排除配置。Core、M Adapter 的 arm64 模拟器切片各自编译通过，M SDK 的 arm64 模拟器切片已在 SDK-only iOS 14.0 工程通过；这些结果不替代完整依赖链的 arm64 模拟器验收。
 
 所有 App 构建均禁用签名，没有运行 SDK 初始化、真实广告、奖励、点击、关闭或生产后端请求。M 本轮开放初始化、开屏、插屏、激励视频和 Native 模板；NativeData、Banner、独立 FullscreenVideo、Draw 未开放。L/N 只有交付仓占位说明，没有发布 Podspec。
+
+## 2026-11-06 Aliyun arm64 模拟器兼容修订
+
+本次仅在 OSET Specs 新增官方 `AliyunLogProducer 4.3.3` 原始规格与 OSET 维护的 `4.3.3.1` 兼容修订。仓库现有 51 个 Pod、53 份规格，先前发布的 51 份规格逐字节不变；Core、M Adapter 和 M SDK 的版本、交付 tag 与文件均未更改。
+
+兼容版本使用同一上游 `4.3.3` tag（commit `9f12d40a8bda23d0775963401e29d6a2954c7e51`）。原规格 SHA1 为 `889e71ee9e0fd0e49c03097dd806196549f8a873`，兼容规格 SHA1 为 `5a16cfb287cd555d5bab91fad5bb0204c7414cea`。只有版本号及两项模拟器架构排除值变化：`arm64 i386` 改为 `i386`，不改上游源码、下载地址、许可、系统版本、源文件和资源配置。
+
+`register_aliyun_compat_spec.py --check` 离线核对固定基底双哈希、精确派生字节及 manifest 中的 upstream/transform 来源记录，CI 同样执行。全部 72 项工具测试通过，三个根 Pod（Aliyun、Core、M Adapter）独立解析均选择 OSET Specs 的 `4.3.3.1`。CocoaPods lint 的规格版本与上游 tag 不同提示为此兼容修订的预期警告；没有更改上游 tag 来消除提示。
+
+| 全新真实远端消费者验证 | 结果 |
+|---|---|
+| 标准全局 OSET Specs + CDN，自然解析 | Aliyun `4.3.3.1`、Core `7.0.4.0`、Adapter `2.0.0.0`、SDK `1.4.16` 均来自 OSET Specs；锁文件与索引 checksum 一致 |
+| 官方源代码完整性 | Aliyun 下载后 66 个文件与官方 `4.3.3` 逐 SHA256 相同；Core 105、Adapter 9、SDK 71 个文件均与原交付一致 |
+| device arm64，iOS 12.0 | BUILD SUCCEEDED |
+| Simulator x86_64，iOS 12.0 | BUILD SUCCEEDED |
+| Simulator arm64，iOS 14.0 | BUILD SUCCEEDED；Aliyun 实际编译 18 个上游 C 和 10 个上游 ObjC 源文件，另有 CocoaPods 生成的 version.c / dummy.m，产物为 arm64 / iOS Simulator |
+| 不使用 `use_frameworks!` 的默认静态 Pods 集成 | 全新真实远端工程 arm64 Simulator 构建通过；Aliyun 为 arm64 静态库，M 动态 SDK 与资源正常嵌入，无手工架构、链接或 post_install 覆盖 |
+| 链接与嵌入 | 自然继承 `-ObjC`，无手工链接或排除架构覆盖；6 个 M Adapter 类与 Core 类符号保留；动态 M SDK 及 Assets/privacy 原始哈希正确 |
+| 已有锁文件的实际定向更新 | `pod update AliyunLogProducer` 仅把 `4.3.3` 改为 `4.3.3.1`；另外三个 Pod 的版本和 checksum、根依赖、原 Podfile checksum 均保持不变 |
+
+已保存 [兼容修订真实消费者锁文件](.github/fixtures/m-2.0.0.0-aliyun-4.3.3.1-Podfile.lock)。另有 26 个隔离 CocoaPods resolver 场景、70 条断言通过，覆盖原 Trunk 锁 `4.3.3` / `3.1.17`、显式来源及局部更新。普通 install 保留已锁版本；启用兼容修订时正常定向更新 Aliyun，无需删除锁文件、全量更新或添加架构 post_install。
+
+主三架构消费者启用 `use_frameworks!`；默认静态 Pods 示例另建独立工程验证。两种集成方式都从真实 OSET Specs 安装同一兼容规格，未修改第三方下载源码。
+
+本次验收覆盖安装、源码与产物完整性、三种架构编译、链接和资源嵌入。构建禁用签名，没有启动 App 或执行真实广告、日志上传、生产后端请求；不等同于这些运行时功能验收。

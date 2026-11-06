@@ -1,0 +1,29 @@
+PODS:
+  - AdSetQDMAdapter (2.0.0.0):
+    - AdSetQDMAdSDK (= 1.4.16)
+    - OSETCoreAd (>= 7.0.4.0)
+  - AdSetQDMAdSDK (1.4.16)
+  - AliyunLogProducer (4.3.3.1)
+  - OSETCoreAd (7.0.4.0):
+    - AliyunLogProducer
+
+DEPENDENCIES:
+  - AdSetQDMAdapter (= 2.0.0.0)
+  - OSETCoreAd (= 7.0.4.0)
+
+SPEC REPOS:
+  https://github.com/OSETSDK/Specs.git:
+    - AdSetQDMAdapter
+    - AdSetQDMAdSDK
+    - AliyunLogProducer
+    - OSETCoreAd
+
+SPEC CHECKSUMS:
+  AdSetQDMAdapter: f5db0a76b77fa5f6ef185ae0db0ad411b222d938
+  AdSetQDMAdSDK: 50d025e53282a40af9d9c1be8178dea0a8f453a3
+  AliyunLogProducer: 5a16cfb287cd555d5bab91fad5bb0204c7414cea
+  OSETCoreAd: 7461fb12831f9fbe7a99557eef71aeb2bd36ebb9
+
+PODFILE CHECKSUM: d54900c2569ed3b50812bf31a64cacaeb41f30ec
+
+COCOAPODS: 1.16.2
