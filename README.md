@@ -96,7 +96,26 @@ git diff --stat
 
 同步脚本只读取已在官方源发布的版本，保留原始 JSON 字节；同版本内容一致时跳过，不一致时拒绝覆盖。脚本不会自动提交或推送。维护者审查差异和验证结果后，再按正常 Git 流程提交并推送本仓库。
 
-首批不迁旧版；后续追加新版本时保留已经发布的目录，保障已切源客户的锁文件可重复安装。未来官方源停止接收新版本后，可在交付 tag 可读取且发布检查完成的前提下使用 `pod repo push` 向本源发布；该首次发布路径不由官方同步脚本代替。
+首批不迁旧版；后续追加新版本时保留已经发布的目录，保障已切源客户的锁文件可重复安装。官方源暂时或永久停止接收新版本时，使用下方原生交付登记流程；官方同步脚本只处理已经在 Trunk 发布的版本。
+
+## 直接向 OSET Specs 发布新版本
+
+先在 `OSETSDK/<Pod>` 交付仓库提交 SDK 文件、Ruby Podspec 和与之语义一致的 `<Pod>.podspec.json`，再推送版本 tag。tag 及 JSON 必须公开可读，JSON 的 source.git/source.tag 必须指向同一交付仓库和版本。完成该版本的安装、构建与依赖检查后，在 Specs 独立克隆中执行：
+
+```sh
+# 默认预览，不查询 Trunk，也不写入
+python3 .github/scripts/register_delivery_spec.py --pod AdSetQDMAdSDK --version 1.4.16
+
+# 核对预览后登记原始 JSON 和交付 tag SHA
+python3 .github/scripts/register_delivery_spec.py --pod AdSetQDMAdSDK --version 1.4.16 --apply
+
+python3 .github/scripts/validate_specs.py
+python3 -m unittest discover -s .github/scripts -p 'test_*.py'
+```
+
+以上 Pod/版本是命令示例，实际可用版本以规格清单为准。登记工具不会自动提交或推送。维护者核对新增文件与完整依赖可解析后，再提交本 Specs 仓库。新版本的未发布依赖应先完成交付和登记；不要为通过解析而降低真实所需依赖版本。
+
+原生登记保留交付仓库 tag 中 JSON 的原始字节，记录 direct_delivery 来源；已有同版本内容或已登记 tag SHA 不一致时拒绝操作。后续向官方源发布同版本时，同样应保持规格和交付文件一致，不能覆盖已登记版本。
 
 ## 校验与版本稳定性
 
