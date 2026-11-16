@@ -1444,6 +1444,29 @@
           }
         }
       ]
+    },
+    {
+      "name": "AdSetQDLAdSDK",
+      "order": 54,
+      "modified_at": "2026-11-16T03:41:29.238839+00:00",
+      "selected_version": "1.9.4.6",
+      "publication_origin": "direct_delivery",
+      "versions": [
+        {
+          "version": "1.9.4.6",
+          "path": "AdSetQDLAdSDK/1.9.4.6/AdSetQDLAdSDK.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/OSETSDK/AdSetQDLAdSDK/1.9.4.6/AdSetQDLAdSDK.podspec.json",
+          "sha1": "8c1125a14011b00dbfc180d9373454274c5c04be",
+          "sha256": "af50da46cabb8d48c53c798ea39d362271edf7ce6b1601cf855044faa086199c",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDLAdSDK.git",
+            "tag": "1.9.4.6"
+          },
+          "dependencies": {},
+          "delivery_tag_sha": "b41857e417916b19d70b71bc7a3a1b31bb09ac68",
+          "publication_origin": "direct_delivery"
+        }
+      ]
     }
   ]
 }
