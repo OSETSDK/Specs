@@ -90,7 +90,7 @@
       "name": "OSETCoreAd",
       "order": 4,
       "modified_at": "2026-10-27T13:24:30.288315+08:00",
-      "selected_version": "7.0.4.0",
+      "selected_version": "7.0.4.1",
       "versions": [
         {
           "version": "7.0.3.5",
@@ -122,6 +122,22 @@
             "AliyunLogProducer": []
           },
           "delivery_tag_sha": "ccb1d199b84a1e036954c12fdbcb70ff42c41597",
+          "publication_origin": "direct_delivery"
+        },
+        {
+          "version": "7.0.4.1",
+          "path": "OSETCoreAd/7.0.4.1/OSETCoreAd.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/OSETSDK/OSETCoreAd/7.0.4.1/OSETCoreAd.podspec.json",
+          "sha1": "a10f780a158e982bf5fc0a774dbad1396a512e9b",
+          "sha256": "f651c6c473edd1bda8ae42e4ecab74d90c3058069391c47e35110835a814d2d4",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETCoreAd.git",
+            "tag": "7.0.4.1"
+          },
+          "dependencies": {
+            "AliyunLogProducer": []
+          },
+          "delivery_tag_sha": "7f902f059b0e0662da38b8af6736353c677a540c",
           "publication_origin": "direct_delivery"
         }
       ]
@@ -184,7 +200,7 @@
       "name": "AdSetQDAAdapter",
       "order": 7,
       "modified_at": "2026-10-21T14:03:37.453876+08:00",
-      "selected_version": "2.0.2.0",
+      "selected_version": "2.0.2.1",
       "versions": [
         {
           "version": "2.0.2.0",
@@ -204,6 +220,25 @@
           },
           "delivery_tag_sha": "fdd7f6a0d850e658e0693b3f02de390478b5783f",
           "tag_spec_matches_canonical": true
+        },
+        {
+          "version": "2.0.2.1",
+          "path": "AdSetQDAAdapter/2.0.2.1/AdSetQDAAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/OSETSDK/AdSetQDAAdapter/2.0.2.1/AdSetQDAAdapter.podspec.json",
+          "sha1": "17dfe6a6a8d90f5ea3a7bafbd97a39cfce5c35f4",
+          "sha256": "9221d2ee9fd9aa54c013aae97cda27191c421f61ffa72b943034273c074a30d4",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDAAdapter.git",
+            "tag": "2.0.2.1"
+          },
+          "dependencies": {
+            "OSETCoreAd": [],
+            "AdSetQDAAdSDK": [
+              "= 3.0.22"
+            ]
+          },
+          "delivery_tag_sha": "93d8a1193ae01700662501cb72402ec4e20c2635",
+          "publication_origin": "direct_delivery"
         }
       ]
     },
@@ -262,7 +297,7 @@
       "name": "OSETYDAdapter",
       "order": 10,
       "modified_at": "2026-10-20T15:54:03.324830+08:00",
-      "selected_version": "2.0.1.0",
+      "selected_version": "2.0.1.1",
       "versions": [
         {
           "version": "2.0.1.0",
@@ -284,6 +319,27 @@
           },
           "delivery_tag_sha": "5199837a5374ad2247ec19975854ea6eb668711d",
           "tag_spec_matches_canonical": true
+        },
+        {
+          "version": "2.0.1.1",
+          "path": "OSETYDAdapter/2.0.1.1/OSETYDAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/OSETSDK/OSETYDAdapter/2.0.1.1/OSETYDAdapter.podspec.json",
+          "sha1": "d788cb5461b4ea67aeaffe11459396f6e19e725e",
+          "sha256": "9450c2ed3a6f365a0e902c251a7ca753080f55d08835c16249c2f1e307ad7bae",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETYDAdapter.git",
+            "tag": "2.0.1.1"
+          },
+          "dependencies": {
+            "OSETCoreAd": [
+              ">= 7.0.3.2"
+            ],
+            "YDADSDK": [
+              "= 3.0.1"
+            ]
+          },
+          "delivery_tag_sha": "a4db986e3f51d1427613feb0bcfc4d3989f31c0a",
+          "publication_origin": "direct_delivery"
         }
       ]
     },
@@ -1368,7 +1424,7 @@
       "name": "AdSetQDMAdapter",
       "order": 52,
       "modified_at": "2026-11-06T06:01:19.331244+00:00",
-      "selected_version": "2.0.0.0",
+      "selected_version": "2.0.1.0",
       "publication_origin": "direct_delivery",
       "versions": [
         {
@@ -1390,6 +1446,27 @@
             ]
           },
           "delivery_tag_sha": "ada672524eea30c468ddda1fc89cdef678aa5fc1",
+          "publication_origin": "direct_delivery"
+        },
+        {
+          "version": "2.0.1.0",
+          "path": "AdSetQDMAdapter/2.0.1.0/AdSetQDMAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/OSETSDK/AdSetQDMAdapter/2.0.1.0/AdSetQDMAdapter.podspec.json",
+          "sha1": "6d6eb5aa15ffe3b82a1ef7c179ef9c84af22ab8d",
+          "sha256": "8faad0c63814eacb036e1674588fc4c8d743a37cc8c283ddc4dfef6017f81c69",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDMAdapter.git",
+            "tag": "2.0.1.0"
+          },
+          "dependencies": {
+            "OSETCoreAd": [
+              ">= 7.0.4.1"
+            ],
+            "AdSetQDMAdSDK": [
+              "= 1.4.16"
+            ]
+          },
+          "delivery_tag_sha": "aad9c63f06ed1625d0292db8422d8a7a5e9665f4",
           "publication_origin": "direct_delivery"
         }
       ]
@@ -1483,6 +1560,36 @@
           },
           "dependencies": {},
           "delivery_tag_sha": "b41857e417916b19d70b71bc7a3a1b31bb09ac68",
+          "publication_origin": "direct_delivery"
+        }
+      ]
+    },
+    {
+      "name": "AdSetQDLAdapter",
+      "order": 55,
+      "modified_at": "2026-11-24T04:25:38.274936+00:00",
+      "selected_version": "2.0.1.0",
+      "publication_origin": "direct_delivery",
+      "versions": [
+        {
+          "version": "2.0.1.0",
+          "path": "AdSetQDLAdapter/2.0.1.0/AdSetQDLAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/OSETSDK/AdSetQDLAdapter/2.0.1.0/AdSetQDLAdapter.podspec.json",
+          "sha1": "c26d3b552a202b7b1aaf52ac747e4e733b77ce51",
+          "sha256": "de0157a7516b2d0559e368ac44cefc9f2c4d8fb7dbf29022f2ea1a0625dcee49",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDLAdapter.git",
+            "tag": "2.0.1.0"
+          },
+          "dependencies": {
+            "OSETCoreAd": [
+              ">= 7.0.4.1"
+            ],
+            "AdSetQDLAdSDK": [
+              "= 1.9.4.6"
+            ]
+          },
+          "delivery_tag_sha": "4aa7288b6f4c71c979eddde2ccb6ef99cb2fc7de",
           "publication_origin": "direct_delivery"
         }
       ]
