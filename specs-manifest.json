@@ -509,7 +509,7 @@
       "name": "AdSetQDFAdapter",
       "order": 17,
       "modified_at": "2026-10-14T18:04:49.258658+08:00",
-      "selected_version": "2.0.1.3",
+      "selected_version": "2.0.1.4",
       "versions": [
         {
           "version": "2.0.1.2",
@@ -548,6 +548,25 @@
             ],
             "AdSetQDFAdSDK": [
               "= 1.1.32.0"
+            ]
+          }
+        },
+        {
+          "version": "2.0.1.4",
+          "path": "AdSetQDFAdapter/2.0.1.4/AdSetQDFAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/d/5/1/AdSetQDFAdapter/2.0.1.4/AdSetQDFAdapter.podspec.json",
+          "sha1": "4882cf90f56de3a4e587c254a9a0d4a6faafcfc8",
+          "sha256": "0999a9ea5aa9fbbc04e5b145249804ae4cc4cc1d4077b2c64bc3d9a456e5aff2",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDFAdapter.git",
+            "tag": "2.0.1.4"
+          },
+          "dependencies": {
+            "OSETCoreAd": [
+              ">= 7.0.3.2"
+            ],
+            "AdSetQDFAdSDK": [
+              "= 1.1.41.0"
             ]
           }
         }
