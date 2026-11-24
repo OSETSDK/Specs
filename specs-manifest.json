@@ -1545,7 +1545,7 @@
       "name": "AdSetQDLAdSDK",
       "order": 54,
       "modified_at": "2026-11-16T03:41:29.238839+00:00",
-      "selected_version": "1.9.4.6",
+      "selected_version": "1.9.5.1",
       "publication_origin": "direct_delivery",
       "versions": [
         {
@@ -1560,6 +1560,20 @@
           },
           "dependencies": {},
           "delivery_tag_sha": "b41857e417916b19d70b71bc7a3a1b31bb09ac68",
+          "publication_origin": "direct_delivery"
+        },
+        {
+          "version": "1.9.5.1",
+          "path": "AdSetQDLAdSDK/1.9.5.1/AdSetQDLAdSDK.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/OSETSDK/AdSetQDLAdSDK/1.9.5.1/AdSetQDLAdSDK.podspec.json",
+          "sha1": "e38e5f05cd0ac9e0cac88db2fda1f2ad907f3e3a",
+          "sha256": "23986eb428a87622d5df994c492aa73e2f6c9a3703174cb082942fd1536cd8fb",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDLAdSDK.git",
+            "tag": "1.9.5.1"
+          },
+          "dependencies": {},
+          "delivery_tag_sha": "2fe58e2edd7ad1e3ab98e3c159d636896d4bb1ec",
           "publication_origin": "direct_delivery"
         }
       ]
