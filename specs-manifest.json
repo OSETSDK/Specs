@@ -586,7 +586,7 @@
       "name": "AdSetQDFAdSDK",
       "order": 19,
       "modified_at": "2026-10-14T10:13:33.770924+08:00",
-      "selected_version": "1.1.32.0",
+      "selected_version": "1.1.41.0",
       "versions": [
         {
           "version": "1.1.32.0",
@@ -601,6 +601,18 @@
           "dependencies": {},
           "delivery_tag_sha": "71f679f140b4e193f5f72165b7bb091310d71ad6",
           "tag_spec_matches_canonical": true
+        },
+        {
+          "version": "1.1.41.0",
+          "path": "AdSetQDFAdSDK/1.1.41.0/AdSetQDFAdSDK.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/CocoaPods/Specs/master/Specs/7/e/5/AdSetQDFAdSDK/1.1.41.0/AdSetQDFAdSDK.podspec.json",
+          "sha1": "76cc6d1693e9bfb385a4f5eab51120e8824abc74",
+          "sha256": "d812b9b879239ec7581ae05bf7e40fcd95bc73092cf4f83b6ed16849b17f15a4",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDFAdSDK.git",
+            "tag": "1.1.41.0"
+          },
+          "dependencies": {}
         }
       ]
     },
