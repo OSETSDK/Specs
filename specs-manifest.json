@@ -90,7 +90,7 @@
       "name": "OSETCoreAd",
       "order": 4,
       "modified_at": "2026-10-27T13:24:30.288315+08:00",
-      "selected_version": "7.0.4.1",
+      "selected_version": "7.0.4.2",
       "versions": [
         {
           "version": "7.0.3.5",
@@ -138,6 +138,22 @@
             "AliyunLogProducer": []
           },
           "delivery_tag_sha": "7f902f059b0e0662da38b8af6736353c677a540c",
+          "publication_origin": "direct_delivery"
+        },
+        {
+          "version": "7.0.4.2",
+          "path": "OSETCoreAd/7.0.4.2/OSETCoreAd.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/OSETSDK/OSETCoreAd/7.0.4.2/OSETCoreAd.podspec.json",
+          "sha1": "0bce3b5a64edc807091625070c65eece4bc67116",
+          "sha256": "d61afa65c8a5a51262e04a4df7cfe784c66d21595e99e3e42fc29489f0ca000c",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETCoreAd.git",
+            "tag": "7.0.4.2"
+          },
+          "dependencies": {
+            "AliyunLogProducer": []
+          },
+          "delivery_tag_sha": "149c9692dbe7b5f9cbe2a154bc6e05f9f6eb74e1",
           "publication_origin": "direct_delivery"
         }
       ]
