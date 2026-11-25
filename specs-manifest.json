@@ -1715,6 +1715,36 @@
           "publication_origin": "direct_delivery"
         }
       ]
+    },
+    {
+      "name": "AdSetQDKAdapter",
+      "order": 56,
+      "modified_at": "2026-11-25T03:17:55.243835+00:00",
+      "selected_version": "2.0.0.0",
+      "publication_origin": "direct_delivery",
+      "versions": [
+        {
+          "version": "2.0.0.0",
+          "path": "AdSetQDKAdapter/2.0.0.0/AdSetQDKAdapter.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/OSETSDK/AdSetQDKAdapter/2.0.0.0/AdSetQDKAdapter.podspec.json",
+          "sha1": "fcbf1fe569ce0d8307abe174278b5c053da8439e",
+          "sha256": "c2cd4e90d1348f0e4a8bc94253aa163756dfcfb02b68b6d33d245c8d2ccec86a",
+          "source": {
+            "git": "https://github.com/OSETSDK/AdSetQDKAdapter.git",
+            "tag": "2.0.0.0"
+          },
+          "dependencies": {
+            "OSETCoreAd": [
+              ">= 7.0.4.2"
+            ],
+            "AdSetQDKAdSDK": [
+              "= 1.6.2"
+            ]
+          },
+          "delivery_tag_sha": "2190614d7a8a5b728d6a86824f3ac57dd92fdb65",
+          "publication_origin": "direct_delivery"
+        }
+      ]
     }
   ]
 }
