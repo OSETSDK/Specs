@@ -6,7 +6,7 @@
       "name": "OSETCoreSDK-BF",
       "order": 1,
       "modified_at": "2026-11-04T10:14:41.303734+08:00",
-      "selected_version": "7.0.3.3",
+      "selected_version": "7.0.4.0",
       "versions": [
         {
           "version": "7.0.3.3",
@@ -27,6 +27,32 @@
           },
           "delivery_tag_sha": "ed6138552aa869c5dab452962265810a97510da1",
           "tag_spec_matches_canonical": true
+        },
+        {
+          "version": "7.0.4.0",
+          "path": "OSETCoreSDK-BF/7.0.4.0/OSETCoreSDK-BF.podspec.json",
+          "origin_url": "https://raw.githubusercontent.com/OSETSDK/OSETCoreSDK-BF/7.0.4.0/OSETCoreSDK-BF.podspec.json",
+          "sha1": "2f64f45d188d0decef91fbcb517d54bb1243cc2d",
+          "sha256": "9da452762923eb2cec5f52973a6a846d96d1b5b55ed32666fc99d55909058e74",
+          "source": {
+            "git": "https://github.com/OSETSDK/OSETCoreSDK-BF.git",
+            "tag": "7.0.4.0"
+          },
+          "dependencies": {
+            "OSETCoreAd": [
+              ">= 7.0.4.0"
+            ],
+            "Ads-CN/BUAdSDK": [],
+            "Ads-CN/CSJMediation": [],
+            "AdSetQDBAdapter": [
+              ">= 2.0.1.0"
+            ],
+            "AdSetQDFAdapter": [
+              ">= 2.0.1.0"
+            ]
+          },
+          "delivery_tag_sha": "3090a4645b342c4661fbf70afbf150d62657d4e7",
+          "publication_origin": "direct_delivery"
         }
       ]
     },
